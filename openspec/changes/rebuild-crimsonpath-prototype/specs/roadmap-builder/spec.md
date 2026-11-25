@@ -74,6 +74,13 @@ The system SHALL show the tailored summary, totals (classes and semesters, couns
 - **WHEN** the checked roadmap has no semesters
 - **THEN** the system says no matching classes were found and to ask the advisor which courses fit these goals
 
+### Requirement: Progress toward graduation
+The roadmap SHALL show the student's progress toward 120 credits: credits from classes already taken, credits this plan adds, and the semesters left until their graduation term.
+
+#### Scenario: Progress shown
+- **WHEN** a student who took INFO-I 101 (4 credits) builds a plan with 11 credits
+- **THEN** the roadmap shows 4 credits taken and 11 planned toward 120
+
 ### Requirement: Build failures are explained
 The system SHALL show a specific message when a build fails, and SHALL re-enable the Build button.
 

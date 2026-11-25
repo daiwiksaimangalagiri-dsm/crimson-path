@@ -24,6 +24,11 @@ Each group is a milestone. When a group is done and `npm run check` passes, comm
 - [x] 4.1 Add design tokens (light and dark) and the layout. Build the quiz and the classes-taken step, and save the profile in localStorage. Verify `web/intake.test.tsx` covers the student-intake scenarios
 - [x] 4.2 Build the roadmap screen (tabs, samples, sources, path view, expandable stops, Ask your advisor, errors) and the chat. Verify `web/roadmap.test.tsx` covers the display, chat and error scenarios, and screenshot it at 375px and 1280px, light and dark
 
+## 4b. Quiz and design upgrade (requested 2026-11-25)
+
+- [x] 4b.1 Collect IU Bloomington majors and minors (`scripts/collect/programs.ts`) and add school, graduation term and summer-plan questions with school-filtered pickers. Verify `shared/programs.test.ts` and the intake tests
+- [x] 4b.2 Add the welcome screen, quiz question list, graduation progress bar and print stylesheet. Verify `npm run e2e` and screenshots at 375px and 1280px
+
 ## 5. Campus opportunities data
 
 - [ ] 5.1 Write `scripts/collect/clubs.ts` (beINvolved) and `scripts/collect/events.ts` (IU events, upcoming only). Commit their JSON. Verify every entry has a `url` and a `collectedAt`

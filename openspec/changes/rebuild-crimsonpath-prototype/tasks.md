@@ -16,13 +16,13 @@ Each group is a milestone. When a group is done and `npm run check` passes, comm
 
 ## 3. Server
 
-- [ ] 3.1 Add `server/prompts.ts` (real date, `shared/data/terms.json`), `server/claude.ts` (SDK tool runner, `claude-opus-5-5`, error codes) and `server/main.ts` (`/api/sources`, `/api/roadmap`, `/api/chat`, zod-checked bodies). Verify `server/main.test.ts` covers 400, `no_api_key` and a stubbed happy path
+- [x] 3.1 Add `server/prompts.ts` (real date, `shared/data/terms.json`), `server/claude.ts` (SDK tool runner, `claude-opus-5-5`, error codes) and `server/main.ts` (`/api/sources`, `/api/roadmap`, `/api/chat`, zod-checked bodies). Verify `server/main.test.ts` covers 400, `no_api_key` and a stubbed happy path
 - [ ] 3.2 Run one live build with the Informatics sample notes. Verify BUS-M 999 and INFO-H 400 land in Ask your advisor, and write the cost of one build in `docs/setup.md`
 
 ## 4. Screens
 
-- [ ] 4.1 Add design tokens (light and dark) and the layout. Build the quiz and the classes-taken step, and save the profile in localStorage. Verify `web/intake.test.tsx` covers the student-intake scenarios
-- [ ] 4.2 Build the roadmap screen (tabs, samples, sources, path view, expandable stops, Ask your advisor, errors) and the chat. Verify `web/roadmap.test.tsx` covers the display, chat and error scenarios, and screenshot it at 375px and 1280px, light and dark
+- [x] 4.1 Add design tokens (light and dark) and the layout. Build the quiz and the classes-taken step, and save the profile in localStorage. Verify `web/intake.test.tsx` covers the student-intake scenarios
+- [x] 4.2 Build the roadmap screen (tabs, samples, sources, path view, expandable stops, Ask your advisor, errors) and the chat. Verify `web/roadmap.test.tsx` covers the display, chat and error scenarios, and screenshot it at 375px and 1280px, light and dark
 
 ## 5. Campus opportunities data
 

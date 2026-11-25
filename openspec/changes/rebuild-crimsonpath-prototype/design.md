@@ -104,3 +104,6 @@ Desktop (≥960px)                         Phone (<640px)
 - [Public repo] → `.env`, `.research/` and raw Handshake exports are gitignored. A check fails if `.env` is ever tracked.
 - [Opportunity data goes stale] → every entry has `collectedAt`, and the sources panel shows the oldest date.
 - [Topic courses share codes] → checks match code plus title (decision above).
+
+### Decision: No live search count while building
+The research app showed "Searching the Classes file (N)…" as each tool call ran. Showing that here would need streaming from server to browser, so the prototype shows a fixed status line instead. Add it back with server-sent events if builds feel slow in testing.

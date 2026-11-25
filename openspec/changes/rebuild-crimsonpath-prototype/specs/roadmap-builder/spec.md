@@ -22,7 +22,7 @@ The system SHALL ask the AI for a roadmap with: a one-sentence summary of how it
 
 #### Scenario: Progress while building
 - **WHEN** a build is running
-- **THEN** the system shows what it is doing, including how many catalog searches it has made, and the Build button is disabled
+- **THEN** the system says it is reading the input and checking classes against the catalog, and the Build button is disabled
 
 ### Requirement: Every returned class is checked against the catalog
 Before showing a roadmap, the system SHALL replace each class's code, title and credits with the catalog's, and SHALL move any class not found in the catalog to Ask your advisor with "Couldn't find this course in the catalog, so it was removed."

@@ -43,8 +43,10 @@ npm ci                  # installs the exact versions in package-lock.json
 cp .env.example .env    # then fill in ANTHROPIC_API_KEY
 npm run dev             # app on http://localhost:5173; API server on PORT (default 8787)
 npm run check           # strict type check + unit tests; must pass before any commit
-npm run e2e             # browser test of the full flow, Claude stubbed
+npm run e2e             # browser test of the full flow in Google Chrome, Claude stubbed
 ```
+
+`npm run e2e` starts Vite by itself and saves screenshots (375px and 1280px, light and dark) to `e2e/.results/`, which git ignores. Look at them after any UI change.
 
 Packages (exact versions, pinned in `package-lock.json`):
 
@@ -83,4 +85,5 @@ Filled in by task 6.3. Outline: create a Google Cloud project, enable the Drive 
 
 ## 8. Troubleshooting
 
-Added as problems come up.
+- Blank page and 404s for `/api.ts` in the browser: the Vite proxy must match `/api/`, not `/api`, or it forwards the frontend's own `api.ts` to the server.
+- Roadmap says the server has no Claude API key: add `ANTHROPIC_API_KEY` to `.env` and restart `npm run dev`.

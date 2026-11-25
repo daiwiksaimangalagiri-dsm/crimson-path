@@ -33,16 +33,26 @@ test("quiz, classes taken, build, chat change", async ({ page }) => {
   } }));
   await page.goto("/");
 
+  await shot(page, "0-welcome");
+  await page.getByRole("button", { name: "Start" }).click();
   await page.getByRole("button", { name: "Next" }).click();
   await expect(page.getByRole("alert")).toHaveText("Pick one to continue.");
-  await shot(page, "1-quiz");
   await page.getByRole("button", { name: "Sophomore" }).click();
-  await page.getByLabel("Major").fill("Informatics");
+  await page.getByRole("button", { name: "Luddy School of Informatics, Computing, and Engineering" }).click();
+  await page.getByRole("combobox", { name: "Major" }).fill("inform");
+  await shot(page, "1-quiz-major");
+  await page.getByRole("option", { name: /^Informatics/ }).click();
+  await page.getByRole("combobox", { name: "Minor (optional)" }).fill("busin");
+  await page.getByRole("option", { name: /^Business/ }).first().click();
   await page.getByRole("button", { name: "Next" }).click();
+  await page.getByRole("button", { name: "Spring 2029" }).click();
   for (const o of ["UX & design", "Data & analytics"]) await page.getByRole("button", { name: o }).click();
+  await shot(page, "1-quiz-interests");
   await page.getByRole("button", { name: "Next" }).click();
   await page.getByRole("button", { name: "A full-time job" }).click();
   await page.getByRole("button", { name: "14–15 (typical)" }).click();
+  await page.getByRole("button", { name: "Internship or job" }).click();
+  await page.getByRole("button", { name: "Next" }).click();
   await page.getByRole("button", { name: "Hands-on projects" }).click();
   await page.getByRole("button", { name: "Next" }).click();
   await page.getByRole("button", { name: "Fine in small doses" }).click();

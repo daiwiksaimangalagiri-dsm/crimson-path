@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { PlanSchema } from "../shared/schemas.ts";
 import { nextDeadline, Planner } from "./Planner.tsx";
 
-const profile = { year: "Junior", major: "Informatics", interests: ["UX & design"], goal: "A full-time job", credits: "14–15 (typical)", learn: ["Hands-on projects"], math: "I enjoy them", time: "5–10", taken: [], takenOther: [] };
+const profile = { year: "Junior", school: "Luddy School of Informatics, Computing, and Engineering", major: "Informatics", gradTerm: "Spring 2028", summer: ["Internship"], interests: ["UX & design"], goal: "A full-time job", credits: "14–15 (typical)", learn: ["Hands-on projects"], math: "I enjoy them", time: "5–10", taken: [], takenOther: [] };
 const plan = PlanSchema.parse({ profile_summary: "Tailored.", suggestions: ["Take INFO-I 201"], ask_advisor: [], semesters: [
   { term: "Spring 2027", items: [{ type: "class", origin: "counselor", name: "X", code: "INFO-I 201", deadline: "Before Spring 2027 classes begin (Jan 11, 2027)", reason: "r", fit: "", credits: "4", offered: "" }] }] });
 const json = (status: number, body: unknown) => Promise.resolve(new Response(JSON.stringify(body), { status }));

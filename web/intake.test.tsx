@@ -11,10 +11,12 @@ describe("quiz", () => {
   it("asks for a major before moving on, and limits interests to 3", () => {
     render(<Quiz initial={null} onDone={vi.fn()} />);
     click("Junior");
+    click("Kelley School of Business");
     click("Next");
     expect(screen.getByRole("alert").textContent).toBe("Enter your major.");
-    fireEvent.change(screen.getByLabelText("Major"), { target: { value: "Informatics" } });
+    fireEvent.change(screen.getByRole("combobox", { name: "Major" }), { target: { value: "My own major" } });
     click("Next");
+    click("Spring 2029");
     for (const o of ["Tech & software", "UX & design", "Data & analytics", "Law & policy"]) click(o);
     expect(screen.getByRole("alert").textContent).toBe("Pick up to 3.");
     expect(screen.getByRole("button", { name: "Law & policy" }).getAttribute("aria-pressed")).toBe("false");
@@ -22,7 +24,7 @@ describe("quiz", () => {
 });
 
 describe("classes taken", () => {
-  const profile = { year: "Junior", major: "Informatics", interests: ["UX & design"], goal: "A full-time job", credits: "14–15 (typical)", learn: ["Hands-on projects"], math: "I enjoy them", time: "5–10", taken: [], takenOther: [] };
+  const profile = { year: "Junior", school: "Luddy School of Informatics, Computing, and Engineering", major: "Informatics", gradTerm: "Spring 2028", summer: ["Internship"], interests: ["UX & design"], goal: "A full-time job", credits: "14–15 (typical)", learn: ["Hands-on projects"], math: "I enjoy them", time: "5–10", taken: [], takenOther: [] };
 
   it("keeps unknown pasted codes as notes and explains empty pastes", () => {
     const onDone = vi.fn();
@@ -49,9 +51,9 @@ describe("classes taken", () => {
 
 describe("saved profile", () => {
   it("ignores a corrupt or incomplete profile", () => {
-    localStorage.setItem("crimsonpath_profile_v3", "{not json");
+    localStorage.setItem("crimsonpath_profile_v4", "{not json");
     expect(getSavedProfile()).toBeNull();
-    localStorage.setItem("crimsonpath_profile_v3", JSON.stringify({ year: "Junior" }));
+    localStorage.setItem("crimsonpath_profile_v4", JSON.stringify({ year: "Junior" }));
     expect(getSavedProfile()).toBeNull();
   });
 });

@@ -16,8 +16,11 @@ export type Course = {
 
 export const ProfileSchema = z.object({
   year: z.string().min(1),
+  school: z.string().min(1).max(200),
   major: z.string().min(1).max(200),
   minor: z.string().max(200).optional(),
+  gradTerm: z.string().min(1).max(40),
+  summer: z.array(z.string().max(100)).max(2),
   interests: z.array(z.string().max(100)).max(3),
   goal: z.string().min(1),
   credits: z.string().min(1),
@@ -108,3 +111,11 @@ export const SourcesSchema = z.object({ courses: z.number() });
 
 export const TermSchema = z.object({ term: z.string(), dates: z.string(), short: z.string() });
 export type Term = z.infer<typeof TermSchema>;
+
+export const ProgramsSchema = z.object({
+  collectedAt: z.string(),
+  sources: z.array(z.string()),
+  majors: z.array(z.object({ name: z.string(), degrees: z.array(z.string()), school: z.string(), url: z.string() })),
+  minors: z.array(z.object({ name: z.string(), school: z.string(), url: z.string() })),
+});
+export type Programs = z.infer<typeof ProgramsSchema>;

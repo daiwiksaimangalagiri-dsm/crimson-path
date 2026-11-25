@@ -198,3 +198,56 @@ input:focus, textarea:focus { border-color: var(--crimson); outline: none; box-s
 .ask { display: flex; gap: 8px; align-items: flex-end; margin-bottom: 8px; }
 
 .foot { max-width: 1120px; margin: 0 auto; padding: 0 20px 32px; color: var(--slate); font-size: 13px; }
+
+.small { font-size: 13px; }
+
+/* Welcome: the one big typographic moment. A crimson rule runs down the left like the path. */
+.welcome { max-width: 1120px; margin: 0 auto; padding: clamp(40px, 8vw, 96px) 20px 64px; }
+.welcome-in { max-width: 720px; border-left: 6px solid var(--crimson); padding-left: clamp(20px, 4vw, 40px); display: grid; gap: 20px; justify-items: start; }
+.welcome h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+.lede { font-size: clamp(17px, 2.2vw, 20px); color: var(--slate); margin: 0; max-width: 56ch; }
+.how { list-style: none; counter-reset: how; margin: 8px 0; padding: 0; display: grid; gap: 14px; }
+.how li { counter-increment: how; display: grid; grid-template-columns: 36px 1fr; column-gap: 12px; }
+.how li::before { content: counter(how); grid-row: span 2; width: 30px; height: 30px; border-radius: 50%; background: var(--crimson); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 14px; }
+.how b { font-size: 17px; }
+.how span { color: var(--slate); font-size: 15px; }
+.primary.big { padding: 14px 40px; font-size: 18px; }
+
+/* Quiz with a question list on wide screens. */
+.quiz { max-width: 1120px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 40px; }
+.quiz .intake { padding-left: 0; padding-right: 0; margin: 0; }
+.qlist { padding-top: 40px; }
+.qlist ol { list-style: none; margin: 0; padding: 0; position: sticky; top: 24px; border-left: 2px solid var(--line); }
+.qlist button { display: grid; width: 100%; text-align: left; background: none; border: 0; padding: 6px 12px; margin-left: -2px; border-left: 2px solid transparent; cursor: pointer; }
+.qlist button:disabled { cursor: default; opacity: 0.5; }
+.qlist li[aria-current="step"] button { border-left-color: var(--crimson); }
+.qshort { font-size: 14px; font-weight: 600; }
+.qlist li[aria-current="step"] .qshort { color: var(--crimson); }
+.qans { font-size: 12.5px; color: var(--slate); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 900px) { .quiz { grid-template-columns: 1fr; } .qlist { display: none; } }
+.qbody { animation: qin 0.22s ease-out; }
+@keyframes qin { from { opacity: 0; transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) { .qbody { animation: none; } }
+.option .icon { font-size: 18px; width: 22px; text-align: center; }
+.listbox .muted { font-size: 12.5px; margin-left: 6px; }
+
+/* Progress toward 120 credits. */
+.grad { display: grid; gap: 8px; }
+.grad-bar { height: 12px; border-radius: 99px; background: var(--limestone); display: flex; overflow: hidden; }
+.grad-bar i { display: block; height: 100%; }
+.grad .taken { background: var(--ink); }
+.grad .planned { background: var(--crimson); }
+.grad p { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; }
+.grad span { display: inline-flex; align-items: center; gap: 6px; }
+.key { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* Print: the roadmap alone. */
+@media print {
+  .masthead, .side, .chat, .foot, .legend .muted { display: none !important; }
+  .planner { display: block; padding: 0; }
+  body { background: #fff; color: #000; }
+  .path { grid-auto-flow: row; overflow: visible; }
+  .class { break-inside: avoid; }
+  .class:not([open]) p { display: none; }
+  .term::before { animation: none; }
+}

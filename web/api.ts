@@ -22,7 +22,7 @@ async function call<T>(path: string, body: unknown, schema: z.ZodType<T>): Promi
 export const createRoadmap = (r: RoadmapRequest): Promise<RoadmapResponse> => call("/api/roadmap", r, RoadmapResponseSchema);
 export const createChatReply = (r: ChatRequest): Promise<ChatResponse> => call("/api/chat", r, ChatResponseSchema);
 
-const KEY = "crimsonpath_profile_v3";
+const KEY = "crimsonpath_profile_v4";
 
 export function getSavedProfile(): Profile | null {
   const raw = localStorage.getItem(KEY);

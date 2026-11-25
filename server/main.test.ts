@@ -5,7 +5,7 @@ import type { AskClaude } from "./claude.ts";
 import { createHandler } from "./main.ts";
 
 const profile = {
-  year: "Sophomore", major: "Informatics", interests: ["UX & design"], goal: "A full-time job", credits: "14–15 (typical)",
+  year: "Sophomore", school: "Luddy School of Informatics, Computing, and Engineering", major: "Informatics", gradTerm: "Spring 2029", summer: ["Internship"], interests: ["UX & design"], goal: "A full-time job", credits: "14–15 (typical)",
   learn: ["Hands-on projects"], math: "Fine in small doses", time: "5–10", taken: ["INFO-I 101"], takenOther: [],
 };
 const notes = "Take INFO-I 201 next semester. Coach also mentioned BUS-M 999. Join a UX club.";
@@ -49,6 +49,8 @@ describe("server", () => {
     expect(res.status).toBe(200);
     expect(prompt).toContain("Today is November 25, 2026");
     expect(prompt).toContain("Classes begin Jan 11, 2027");
+    expect(prompt).toContain("through Spring 2029");
+    expect(prompt).toContain("Do NOT put classes in summer terms");
     expect(body.plan.semesters[0].items).toEqual([expect.objectContaining({ code: "INFO-I 201", origin: "counselor" })]);
     const needs = body.plan.ask_advisor.map((a: { need: string }) => a.need).join(" | ");
     expect(needs).toContain("BUS-M 999");

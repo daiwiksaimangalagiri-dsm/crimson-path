@@ -3,13 +3,14 @@ import type { Profile } from "../shared/schemas.ts";
 import { getSavedProfile, saveProfile } from "./api.ts";
 import { Quiz, Taken } from "./Intake.tsx";
 import { Planner } from "./Planner.tsx";
+import { Welcome } from "./Welcome.tsx";
 
-type Step = "quiz" | "taken" | "plan";
+type Step = "welcome" | "quiz" | "taken" | "plan";
 const STEPS: [Step, string][] = [["quiz", "About you"], ["taken", "Classes taken"], ["plan", "Your roadmap"]];
 
 export function App() {
   const [profile, setProfile] = useState<Profile | null>(getSavedProfile);
-  const [step, setStep] = useState<Step>(() => (!profile ? "quiz" : profile.takenDone ? "plan" : "taken"));
+  const [step, setStep] = useState<Step>(() => (!profile ? "welcome" : profile.takenDone ? "plan" : "taken"));
 
   const go = (next: Step, p: Profile | null = profile) => {
     if (p) saveProfile(p);
@@ -27,12 +28,13 @@ export function App() {
           </span>
           <span className="brand">CrimsonPath</span>
           <ol className="steps" aria-label="Progress">
-            {STEPS.map(([s, label], i) => (
+            {step !== "welcome" && STEPS.map(([s, label], i) => (
               <li key={s} aria-current={s === step ? "step" : undefined}>{i + 1}. {label}</li>
             ))}
           </ol>
         </div>
       </header>
+      {step === "welcome" && <Welcome onStart={() => go("quiz")} />}
       {step === "quiz" && <Quiz initial={profile} onDone={(p) => go("taken", p)} />}
       {step === "taken" && profile && (
         <Taken profile={profile} onBack={() => go("quiz")} onDone={(p) => go("plan", { ...p, takenDone: true })} />

@@ -20,7 +20,10 @@ const DEADLINE = `a deadline (a target date or "before <term> classes begin (<da
 
 export function profileText(p: Profile): string {
   return `- Year: ${p.year}
+- School: ${p.school}
 - Major: ${p.major}${p.minor ? ` · Minor: ${p.minor}` : ""}
+- Expected graduation: ${p.gradTerm}
+- Summer plans: ${p.summer.join(", ")}
 - Career interests: ${p.interests.join(", ")}
 - Goal after graduation: ${p.goal}
 - Preferred load: ${p.credits} credit hours per semester
@@ -28,6 +31,15 @@ export function profileText(p: Profile): string {
 - Math/coding comfort: ${p.math}
 - Weekly hours for outside commitments: ${p.time}
 - Other notes: ${p.extra || "none"}`;
+}
+
+export const SUMMER_CLASSES = "Take summer classes";
+
+// Which terms the roadmap may use: next term through graduation; summers only if the student wants summer classes.
+export function planWindow(p: Profile): string {
+  return `PLANNING WINDOW: plan semesters from the next term through ${p.gradTerm} (the student's expected graduation). ${
+    p.summer.includes(SUMMER_CLASSES) ? "The student wants summer classes, so summer terms may hold classes." : "Do NOT put classes in summer terms; the student has other summer plans."
+  }`;
 }
 
 export function takenText(p: Profile, titleOf: (code: string) => string | undefined): string {
@@ -58,6 +70,8 @@ ${calendar(now)}
 
 STUDENT PROFILE (from their intake quiz):
 ${profileText(p)}
+
+${planWindow(p)}
 
 CLASSES THE STUDENT HAS ALREADY TAKEN (or is taking now):
 ${taken}
@@ -92,6 +106,8 @@ ${calendar(now)}
 
 STUDENT PROFILE (from their intake quiz):
 ${profileText(p)}
+
+${planWindow(p)}
 
 CLASSES THE STUDENT HAS ALREADY TAKEN (or is taking now):
 ${taken}
@@ -128,6 +144,7 @@ ${calendar(now)}
 
 STUDENT PROFILE:
 ${profileText(r.profile)}
+${planWindow(r.profile)}
 ALREADY TAKEN: ${taken}
 ${r.mode === "interests" ? "STUDENT'S OWN INTERESTS (no counselor notes)" : "COUNSELOR NOTES"}:
 """

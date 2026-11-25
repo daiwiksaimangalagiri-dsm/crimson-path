@@ -2,30 +2,94 @@ import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { catalog, firstNum, norm, parseCodes, suggestCourses } from "../shared/catalog.ts";
 import { ProfileSchema, type Profile } from "../shared/schemas.ts";
 
-type Choice = { id: "year" | "goal" | "credits" | "math" | "time"; kind: "single"; title: string; options: string[]; hint?: string };
-type Multi = { id: "interests" | "learn"; kind: "multi"; title: string; options: string[]; max: number; hint: string };
-type Text = { id: "major"; kind: "text"; title: string; hint: string };
-type Long = { id: "extra"; kind: "long"; title: string; hint: string };
-type Question = Choice | Multi | Text | Long;
+import { gradTerms, NOT_SURE, programs, schools, suggestPrograms } from "../shared/programs.ts";
+
+type SingleId = "year" | "school" | "gradTerm" | "goal" | "credits" | "math" | "time";
+type MultiId = "interests" | "learn" | "summer";
+type Question = { short: string; title: string; hint?: string } & (
+  | { kind: "single"; id: SingleId; options: string[] }
+  | { kind: "multi"; id: MultiId; options: string[]; max: number }
+  | { kind: "programs"; id: "major" }
+  | { kind: "long"; id: "extra" }
+);
+
+// Small glyphs to make long option lists scannable.
+const ICONS: Record<string, string> = {
+  "Tech & software": "💻", "UX & design": "✏️", "Data & analytics": "📊", "Business & finance": "💼", "Marketing & media": "📣",
+  "Health & science": "🧬", "Education & social impact": "🌱", "Law & policy": "⚖️", "Arts & performance": "🎭", "Not sure yet": "🧭",
+  "A full-time job": "💼", "Grad or professional school": "🎓", "Starting my own thing": "🚀",
+  "Take summer classes": "📚", "Internship or job": "🏢", "Study abroad": "✈️", "Taking a break": "🌤️",
+  "Hands-on projects": "🛠️", "Lectures & reading": "📖", "Discussion & writing": "💬", "Labs & research": "🔬",
+};
 
 export const QUIZ: Question[] = [
-  { id: "year", kind: "single", title: "What year are you?", options: ["Freshman", "Sophomore", "Junior", "Senior"] },
-  { id: "major", kind: "text", title: "What's your major?", hint: "Add a minor too if you have one." },
-  { id: "interests", kind: "multi", max: 3, title: "Which career areas interest you?", hint: "Pick up to 3.",
+  { id: "year", kind: "single", short: "Year", title: "What year are you?", options: ["Freshman", "Sophomore", "Junior", "Senior"] },
+  { id: "school", kind: "single", short: "School", title: "Which IU school is your major in?", hint: "This narrows the list of majors on the next question.", options: [...schools, NOT_SURE] },
+  { id: "major", kind: "programs", short: "Major", title: "What's your major?", hint: "Start typing to search IU Bloomington's majors. Add a minor too if you have one." },
+  { id: "gradTerm", kind: "single", short: "Graduation", title: "When do you expect to graduate?", hint: "CrimsonPath plans up to this term.", options: gradTerms(new Date()) },
+  { id: "interests", kind: "multi", max: 3, short: "Interests", title: "Which career areas interest you?", hint: "Pick up to 3.",
     options: ["Tech & software", "UX & design", "Data & analytics", "Business & finance", "Marketing & media", "Health & science", "Education & social impact", "Law & policy", "Arts & performance", "Not sure yet"] },
-  { id: "goal", kind: "single", title: "After graduation, what are you aiming for?", options: ["A full-time job", "Grad or professional school", "Starting my own thing", "Not sure yet"] },
-  { id: "credits", kind: "single", title: "How many credit hours per semester feels right?", options: ["12–13 (lighter)", "14–15 (typical)", "16–17 (heavier)", "18+ (max)"] },
-  { id: "learn", kind: "multi", max: 2, title: "How do you learn best?", hint: "Pick up to 2.", options: ["Hands-on projects", "Lectures & reading", "Discussion & writing", "Labs & research"] },
-  { id: "math", kind: "single", title: "How do you feel about math and coding?", options: ["I'd rather avoid them", "Fine in small doses", "I enjoy them"] },
-  { id: "time", kind: "single", title: "Hours per week for clubs, a job, or other commitments?", options: ["Under 5", "5–10", "10–20", "20+"] },
-  { id: "extra", kind: "long", title: "Anything else CrimsonPath should know?", hint: "Optional. For example: you work part-time, plan to study abroad, have AP credit, or want to graduate early." },
+  { id: "goal", kind: "single", short: "Goal", title: "After graduation, what are you aiming for?", options: ["A full-time job", "Grad or professional school", "Starting my own thing", "Not sure yet"] },
+  { id: "credits", kind: "single", short: "Load", title: "How many credit hours per semester feels right?", options: ["12–13 (lighter)", "14–15 (typical)", "16–17 (heavier)", "18+ (max)"] },
+  { id: "summer", kind: "multi", max: 2, short: "Summers", title: "What do you want to do in the summers?", hint: "Pick up to 2. Summer terms only get classes if you pick summer classes.",
+    options: ["Take summer classes", "Internship or job", "Study abroad", "Taking a break"] },
+  { id: "learn", kind: "multi", max: 2, short: "Learning", title: "How do you learn best?", hint: "Pick up to 2.", options: ["Hands-on projects", "Lectures & reading", "Discussion & writing", "Labs & research"] },
+  { id: "math", kind: "single", short: "Math", title: "How do you feel about math and coding?", options: ["I'd rather avoid them", "Fine in small doses", "I enjoy them"] },
+  { id: "time", kind: "single", short: "Time", title: "Hours per week for clubs, a job, or other commitments?", options: ["Under 5", "5–10", "10–20", "20+"] },
+  { id: "extra", kind: "long", short: "Anything else", title: "Anything else CrimsonPath should know?", hint: "Optional. For example: you work part-time, plan to study abroad, have AP credit, or want to graduate early." },
 ];
 
-type Draft = { [K in "year" | "goal" | "credits" | "math" | "time" | "major" | "minor" | "extra"]: string } & { interests: string[]; learn: string[] };
+type Draft = Record<SingleId | "major" | "minor" | "extra", string> & Record<MultiId, string[]>;
 const toDraft = (p: Profile | null): Draft => ({
-  year: p?.year ?? "", goal: p?.goal ?? "", credits: p?.credits ?? "", math: p?.math ?? "", time: p?.time ?? "",
-  major: p?.major ?? "", minor: p?.minor ?? "", extra: p?.extra ?? "", interests: p?.interests ?? [], learn: p?.learn ?? [],
+  year: p?.year ?? "", school: p?.school ?? "", gradTerm: p?.gradTerm ?? "", goal: p?.goal ?? "", credits: p?.credits ?? "",
+  math: p?.math ?? "", time: p?.time ?? "", major: p?.major ?? "", minor: p?.minor ?? "", extra: p?.extra ?? "",
+  interests: p?.interests ?? [], learn: p?.learn ?? [], summer: p?.summer ?? [],
 });
+
+function answerOf(q: Question, d: Draft): string {
+  if (q.kind === "single") return d[q.id];
+  if (q.kind === "multi") return d[q.id].join(", ");
+  if (q.kind === "programs") return d.major + (d.minor ? ` + ${d.minor}` : "");
+  return d.extra ? "Added" : "";
+}
+
+function ProgramPicker({ id, label, value, list, school, onChange, onEnter, autoFocus }: {
+  id: string; label: string; value: string; list: { name: string; school: string }[]; school: string;
+  onChange: (v: string) => void; onEnter: () => void; autoFocus?: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const hits = open ? suggestPrograms(list, value, school) : [];
+  const pick = (name: string) => { onChange(name); setOpen(false); };
+  const keys = (e: KeyboardEvent) => {
+    if (e.key === "ArrowDown") { e.preventDefault(); setOpen(true); setActive(Math.min(active + 1, hits.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(active - 1, 0)); }
+    else if (e.key === "Escape") setOpen(false);
+    else if (e.key === "Enter") {
+      e.preventDefault();
+      const h = hits[active];
+      if (h && open && h.name !== value) pick(h.name); else onEnter();
+    }
+  };
+  return (
+    <div className="combo">
+      <label htmlFor={id} className="label">{label}</label>
+      <input id={id} role="combobox" aria-expanded={hits.length > 0} aria-controls={`${id}-list`} aria-autocomplete="list"
+        aria-activedescendant={hits[active] ? `${id}-opt-${active}` : undefined} autoComplete="off" autoFocus={autoFocus}
+        value={value} placeholder="Start typing" onKeyDown={keys} onFocus={() => setOpen(true)} onBlur={() => setOpen(false)}
+        onChange={(e) => { onChange(e.target.value); setOpen(true); setActive(0); }} />
+      {hits.length > 0 && (
+        <ul id={`${id}-list`} role="listbox" className="listbox">
+          {hits.map((h, n) => (
+            <li key={h.name} id={`${id}-opt-${n}`} role="option" aria-selected={n === active} onMouseDown={(e) => { e.preventDefault(); pick(h.name); }}>
+              {h.name} <span className="muted">{h.school.replace(/^(The )?/, "")}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
 
 export function Quiz({ initial, onDone }: { initial: Profile | null; onDone: (p: Profile) => void }) {
   const [i, setI] = useState(0);
@@ -34,14 +98,14 @@ export function Quiz({ initial, onDone }: { initial: Profile | null; onDone: (p:
   const q = QUIZ[i];
   if (!q) throw new Error(`No quiz question ${i}`);
 
-  const missing = (): string => {
-    if (q.kind === "single" && !d[q.id]) return "Pick one to continue.";
-    if (q.kind === "multi" && !d[q.id].length) return "Pick at least one.";
-    if (q.kind === "text" && !d.major.trim()) return "Enter your major.";
+  const missing = (draft: Draft): string => {
+    if (q.kind === "single" && !draft[q.id]) return "Pick one to continue.";
+    if (q.kind === "multi" && !draft[q.id].length) return "Pick at least one.";
+    if (q.kind === "programs" && !draft.major.trim()) return "Enter your major.";
     return "";
   };
   const next = (draft = d) => {
-    const m = q.kind === "single" && draft[q.id] ? "" : missing();
+    const m = missing(draft);
     if (m) return setErr(m);
     setErr("");
     if (i < QUIZ.length - 1) return setI(i + 1);
@@ -50,49 +114,81 @@ export function Quiz({ initial, onDone }: { initial: Profile | null; onDone: (p:
       taken: initial?.taken ?? [], takenOther: initial?.takenOther ?? [],
     }));
   };
-  const enter = (e: KeyboardEvent) => { if (e.key === "Enter") { e.preventDefault(); next(); } };
+  const firstOpen = QUIZ.findIndex((x) => !answerOf(x, d) && x.kind !== "long");
 
   return (
-    <main className="intake">
-      <div className="progress" role="progressbar" aria-valuemin={0} aria-valuemax={QUIZ.length} aria-valuenow={i} aria-label="Quiz progress">
-        <i style={{ width: `${(i / QUIZ.length) * 100}%` }} />
-      </div>
-      <p className="eyebrow">Question {i + 1} of {QUIZ.length}</p>
-      <h1>{q.title}</h1>
-      {q.hint && <p className="hint">{q.hint}</p>}
-
-      {(q.kind === "single" || q.kind === "multi") && (
-        <div className={`options${q.options.length > 4 ? " two" : ""}`} role="group" aria-label={q.title}>
-          {q.options.map((o) => {
-            const on = q.kind === "multi" ? d[q.id].includes(o) : d[q.id] === o;
+    <main className="quiz">
+      <nav className="qlist" aria-label="Questions">
+        <ol>
+          {QUIZ.map((x, n) => {
+            const a = answerOf(x, d);
+            const canJump = n <= (firstOpen < 0 ? QUIZ.length : firstOpen);
             return (
-              <button key={o} type="button" className={`option ${q.kind}`} aria-pressed={on} onClick={() => {
-                if (q.kind === "single") { const nd = { ...d, [q.id]: o }; setD(nd); next(nd); return; }
-                const cur = d[q.id];
-                if (!on && cur.length >= q.max) return setErr(`Pick up to ${q.max}.`);
-                setErr("");
-                setD({ ...d, [q.id]: on ? cur.filter((x) => x !== o) : [...cur, o] });
-              }}>
-                <span className="box" aria-hidden="true" />{o}
-              </button>
+              <li key={x.id} aria-current={n === i ? "step" : undefined} className={a ? "done" : ""}>
+                <button type="button" disabled={!canJump} onClick={() => { setErr(""); setI(n); }}>
+                  <span className="qshort">{x.short}</span>
+                  {a && <span className="qans">{a}</span>}
+                </button>
+              </li>
             );
           })}
-        </div>
-      )}
-      {q.kind === "text" && (
-        <div className="fields">
-          <label>Major<input autoFocus value={d.major} placeholder="e.g. Informatics" onChange={(e) => setD({ ...d, major: e.target.value })} onKeyDown={enter} /></label>
-          <label>Minor (optional)<input value={d.minor} placeholder="e.g. Business" onChange={(e) => setD({ ...d, minor: e.target.value })} onKeyDown={enter} /></label>
-        </div>
-      )}
-      {q.kind === "long" && (
-        <textarea aria-label={q.title} rows={4} placeholder="Optional" value={d.extra} onChange={(e) => setD({ ...d, extra: e.target.value })} />
-      )}
+        </ol>
+      </nav>
 
-      <p className="error" role="alert">{err}</p>
-      <div className="nav">
-        {i > 0 ? <button type="button" className="ghost" onClick={() => { setErr(""); setI(i - 1); }}>Back</button> : <span />}
-        <button type="button" className="primary" onClick={() => next()}>{i === QUIZ.length - 1 ? "Continue" : "Next"}</button>
+      <div className="intake">
+        <div className="progress" role="progressbar" aria-valuemin={0} aria-valuemax={QUIZ.length} aria-valuenow={i} aria-label="Quiz progress">
+          <i style={{ width: `${(i / QUIZ.length) * 100}%` }} />
+        </div>
+        <div className="qbody" key={i}>
+          <p className="eyebrow">Question {i + 1} of {QUIZ.length}</p>
+          <h1>{q.title}</h1>
+          {q.hint && <p className="hint">{q.hint}</p>}
+
+          {(q.kind === "single" || q.kind === "multi") && (
+            <div className={`options${q.options.length > 4 ? " two" : ""}`} role="group" aria-label={q.title}>
+              {q.options.map((o) => {
+                const on = q.kind === "multi" ? d[q.id].includes(o) : d[q.id] === o;
+                return (
+                  <button key={o} type="button" className={`option ${q.kind}`} aria-pressed={on} onClick={() => {
+                    if (q.kind === "single") {
+                      const nd = { ...d, [q.id]: o };
+                      if (q.id === "school" && o !== d.school) nd.major = "";
+                      setD(nd);
+                      next(nd);
+                      return;
+                    }
+                    const cur = d[q.id];
+                    if (!on && cur.length >= q.max) return setErr(`Pick up to ${q.max}.`);
+                    setErr("");
+                    setD({ ...d, [q.id]: on ? cur.filter((x) => x !== o) : [...cur, o] });
+                  }}>
+                    <span className="box" aria-hidden="true" />
+                    {ICONS[o] && <span className="icon" aria-hidden="true">{ICONS[o]}</span>}
+                    {o}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          {q.kind === "programs" && (
+            <div className="fields">
+              <ProgramPicker id="major" label="Major" value={d.major} list={programs.majors} school={d.school} autoFocus
+                onChange={(v) => setD({ ...d, major: v })} onEnter={() => next()} />
+              <ProgramPicker id="minor" label="Minor (optional)" value={d.minor} list={programs.minors} school=""
+                onChange={(v) => setD({ ...d, minor: v })} onEnter={() => next()} />
+              <p className="muted small">Not listed? Type it and continue. Lists from IU's program pages, collected {programs.collectedAt}.</p>
+            </div>
+          )}
+          {q.kind === "long" && (
+            <textarea aria-label={q.title} rows={4} placeholder="Optional" value={d.extra} onChange={(e) => setD({ ...d, extra: e.target.value })} />
+          )}
+        </div>
+
+        <p className="error" role="alert">{err}</p>
+        <div className="nav">
+          {i > 0 ? <button type="button" className="ghost" onClick={() => { setErr(""); setI(i - 1); }}>Back</button> : <span />}
+          <button type="button" className="primary" onClick={() => next()}>{i === QUIZ.length - 1 ? "Continue" : "Next"}</button>
+        </div>
       </div>
     </main>
   );

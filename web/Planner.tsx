@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import termRows from "../shared/data/terms.json" with { type: "json" };
-import { catalog, firstNum } from "../shared/catalog.ts";
+import { catalog, firstNum, norm } from "../shared/catalog.ts";
+import { upcomingTerms } from "../shared/programs.ts";
 import type { ChatMessage, Detected, Mode, Plan, Profile } from "../shared/schemas.ts";
 import { createChatReply, createRoadmap } from "./api.ts";
 
@@ -29,6 +30,18 @@ export function nextDeadline(plan: Plan, now: Date): { days: number; label: stri
   return best && { days: Math.ceil((best.d.getTime() - now.getTime()) / 86400000), label: best.label };
 }
 
+const DEGREE_CREDITS = 120;
+
+// Credits already earned (from the catalog) and planned, plus regular semesters left until graduation.
+export function progressOf(plan: Plan, profile: Profile, now: Date) {
+  const taken = profile.taken.reduce((a, c) => a + firstNum(catalog.byCode.get(norm(c))?.[0]?.credits ?? ""), 0);
+  const planned = plan.semesters.flatMap((t) => t.items).reduce((a, i) => a + firstNum(i.credits), 0);
+  const terms = upcomingTerms(now, 20);
+  const end = terms.indexOf(profile.gradTerm);
+  const left = end < 0 ? null : terms.slice(0, end + 1).filter((t) => !t.startsWith("Summer")).length;
+  return { taken, planned, left };
+}
+
 export function Planner({ profile, onRetake, onEditTaken }: { profile: Profile; onRetake: () => void; onEditTaken: () => void }) {
   const [mode, setMode] = useState<Mode>("notes");
   const [texts, setTexts] = useState<Record<Mode, string>>({ notes: "", interests: "" });
@@ -53,7 +66,7 @@ export function Planner({ profile, onRetake, onEditTaken }: { profile: Profile; 
     }
   };
 
-  const chips = [profile.year, profile.major + (profile.minor ? ` + ${profile.minor} minor` : ""), ...profile.interests, profile.goal, profile.credits, `Math and coding: ${profile.math.toLowerCase()}`];
+  const chips = [profile.year, profile.major + (profile.minor ? ` + ${profile.minor} minor` : ""), `Graduating ${profile.gradTerm}`, ...profile.interests, profile.goal, profile.credits, `Math and coding: ${profile.math.toLowerCase()}`];
   const ideas = [...profile.interests.filter((x) => x !== "Not sure yet"), `More ${profile.major}`];
   const nTaken = profile.taken.length + profile.takenOther.length;
 
@@ -131,10 +144,20 @@ function Roadmap({ built, profile, onPlan }: { built: Built; profile: Profile; o
   const nC = all.filter((i) => i.origin === "counselor").length;
   const nd = nextDeadline(plan, new Date());
   const target = Number(profile.credits.match(/\d+/g)?.at(-1) ?? 15);
+  const prog = progressOf(plan, profile, new Date());
+  const pct = (n: number) => `${Math.min((n / DEGREE_CREDITS) * 100, 100)}%`;
 
   return (
     <article className="roadmap">
       {plan.profile_summary && <p className="summary">{plan.profile_summary}</p>}
+      <div className="grad" aria-label={`${prog.taken} credits taken and ${prog.planned} planned, of ${DEGREE_CREDITS}`}>
+        <div className="grad-bar" aria-hidden="true"><i className="taken" style={{ width: pct(prog.taken) }} /><i className="planned" style={{ width: pct(prog.planned) }} /></div>
+        <p>
+          <span><i className="key taken" aria-hidden="true" />{prog.taken} credits taken</span>
+          <span><i className="key planned" aria-hidden="true" />{prog.planned} in this plan</span>
+          <span className="muted">of {DEGREE_CREDITS} to graduate{prog.left !== null && `, ${prog.left} ${prog.left === 1 ? "semester" : "semesters"} until ${profile.gradTerm}`}</span>
+        </p>
+      </div>
       <p className="figures">
         <span><b>{all.length}</b> classes over {plan.semesters.length} {plan.semesters.length === 1 ? "semester" : "semesters"}</span>
         {mode === "notes" && <span className="c"><b>{nC}</b> counselor's picks</span>}

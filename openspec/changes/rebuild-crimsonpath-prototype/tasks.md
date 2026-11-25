@@ -6,13 +6,13 @@ Each group is a milestone. When a group is done and `npm run check` passes, comm
 
 ## 1. Scaffold
 
-- [ ] 1.1 Add `package.json`, `tsconfig.json` (strict), `vite.config.ts` (root `web/`, `/api` proxy), `.env.example`, and `dev` / `check` / `e2e` scripts. Install the approved packages with `--save-exact`. Verify `npm run check` passes and `git check-ignore .env .research` prints both
-- [ ] 1.2 Update `docs/setup.md` section 4 with the real commands, and verify by following it in a fresh clone
+- [x] 1.1 Add `package.json`, `tsconfig.json` (strict), `vite.config.ts` (root `web/`, `/api` proxy), `.env.example`, and `dev` / `check` / `e2e` scripts. Install the approved packages with `--save-exact`. Verify `npm run check` passes and `git check-ignore .env .research` prints both
+- [x] 1.2 Update `docs/setup.md` section 4 with the real commands, and verify by following it in a fresh clone
 
 ## 2. Catalog and plan rules (shared)
 
-- [ ] 2.1 Copy `courses.json` to `shared/data/`. Add schemas (`shared/schemas.ts`) and `lookupCode`, `searchCourses`, `detectCodes` (`shared/catalog.ts`). Verify `shared/catalog.test.ts` covers the course-catalog scenarios
-- [ ] 2.2 Port `enforce()` to `shared/plan.ts`, matching on code plus title. Verify `shared/plan.test.ts` covers the roadmap-builder rules (invented course, taken class, fake counselor code, non-class item, origin labels)
+- [x] 2.1 Copy `courses.json` to `shared/data/`. Add schemas (`shared/schemas.ts`) and `lookupCode`, `searchCourses`, `detectCodes` (`shared/catalog.ts`). Verify `shared/catalog.test.ts` covers the course-catalog scenarios
+- [x] 2.2 Port `enforce()` to `shared/plan.ts`, matching on code plus title. Verify `shared/plan.test.ts` covers the roadmap-builder rules (invented course, taken class, fake counselor code, non-class item, origin labels)
 
 ## 3. Server
 

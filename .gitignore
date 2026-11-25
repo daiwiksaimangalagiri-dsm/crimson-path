@@ -12,3 +12,9 @@ node_modules/
 .claude-flow/data/
 .claude-flow/logs/
 .claude-flow/sessions/
+
+# Research materials (local only: chat log, raw catalog)
+.research/
+
+# Raw Handshake exports
+scripts/collect/raw/

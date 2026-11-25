@@ -2,7 +2,7 @@
 
 How to get Crimson Path running on a new machine. Every tool, install and secret the project uses is listed here. Update this file in the same commit as any install or configuration change.
 
-Status (2026-11-25): planning is done (`openspec/changes/rebuild-crimsonpath-prototype/`). App code and npm packages arrive in task group 1, and this file grows with each milestone.
+Status (2026-11-25): the prototype is being built. The plan is in `openspec/changes/rebuild-crimsonpath-prototype/`.
 
 ## 1. Prerequisites
 
@@ -34,18 +34,33 @@ The repo is public. Secrets go in `.env`, which git ignores. Never commit it.
 | `ANTHROPIC_API_KEY` | Building roadmaps and chat (each call is billed) | https://console.anthropic.com → API keys |
 | `VITE_GOOGLE_CLIENT_ID` | Optional. Shows "Save to Google Drive" | Google Cloud setup, section 6 |
 
-`.env.example` (added in task 1.3) lists them all.
+`.env.example` lists them all.
 
 ## 4. Install, run, check
 
-Filled in by task group 1. Planned commands:
-
 ```bash
-npm ci          # exact versions from package-lock.json
-npm run dev     # web on http://localhost:5173, API proxied to the server
-npm run check   # type check + unit tests
-npm run e2e     # browser tests, Claude stubbed
+npm ci                  # installs the exact versions in package-lock.json
+cp .env.example .env    # then fill in ANTHROPIC_API_KEY
+npm run dev             # app on http://localhost:5173; API server on PORT (default 8787)
+npm run check           # strict type check + unit tests; must pass before any commit
+npm run e2e             # browser test of the full flow, Claude stubbed
 ```
+
+Packages (exact versions, pinned in `package-lock.json`):
+
+| Package | Version | Why |
+|---|---|---|
+| react, react-dom | 19.3.1 | UI |
+| zod | 4.6.7 | Parses every request, the AI's answer and saved profiles |
+| @anthropic-ai/sdk | 1.10.0 | Calls Claude from the server (newest release at least 7 days old at install) |
+| vite, @vitejs/plugin-react | 8.3.8, 6.3.0 | Dev server and build |
+| typescript | 7.0.2 | Strict type check (`tsc --noEmit`) |
+| vitest | 5.1.1 | Unit tests (5.1.2 was a day old at install) |
+| @testing-library/react, @testing-library/dom, jsdom | 16.3.3, 10.4.2, 31.0.1 | Component tests |
+| @playwright/test | 1.65.1 | Browser test |
+| @types/react, @types/react-dom, @types/node | 19.3.0, 19.3.0, 24.19.2 | Type definitions only |
+
+The server runs TypeScript directly with Node 24, so it needs no build step. Imports inside `server/` and `shared/` use `.ts` extensions for that reason.
 
 ## 5. Claude Code for this repo
 

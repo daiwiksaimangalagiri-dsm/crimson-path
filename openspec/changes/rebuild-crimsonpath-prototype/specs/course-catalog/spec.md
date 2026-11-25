@@ -1,0 +1,47 @@
+# Spec Delta
+
+## Purpose
+
+Provides the IU Bloomington undergraduate course list as the only source of classes, with lookup, search and code detection that the quiz, the AI and the rule checks all share.
+
+## ADDED Requirements
+
+### Requirement: Catalog is the only source of classes
+The system SHALL load the undergraduate course list (3,407 courses, levels 100–499) with code, title and credits, plus terms offered and attributes where present, and SHALL never show or recommend a class that is not in it.
+
+#### Scenario: Catalog loaded
+- **WHEN** the roadmap screen opens
+- **THEN** it lists each data source with its count, or "not loaded" for any opportunity file that is missing
+
+#### Scenario: Catalog fails to load
+- **WHEN** the course list can't be loaded
+- **THEN** the system shows "The course list didn't load. Refresh the page to try again." and disables roadmap building
+
+### Requirement: Code lookup accepts loose formats
+The system SHALL resolve a course code written as "INFO-I 101", "INFO I101", "info i 101", "INFO 101" or "I101", and SHALL report one of: found, similar (with up to 8 candidates), not in catalog, or not a code.
+
+#### Scenario: Exact code
+- **WHEN** looking up "csci c200"
+- **THEN** the result is found, with CSCI-C 200 and its title and credits
+
+#### Scenario: Missing letter
+- **WHEN** looking up "INFO 101" and exactly one INFO course is numbered 101
+- **THEN** the result is found with that course
+
+#### Scenario: Code not in catalog
+- **WHEN** looking up "BUS-M 999"
+- **THEN** the result is not in catalog
+
+### Requirement: Keyword search ranks real courses
+The system SHALL search course codes and titles by keyword, ignore filler words ("intro", "course", "the"), optionally filter by department and highest level, and SHALL return at most 20 courses, ranked by match strength with lower levels first on ties.
+
+#### Scenario: Search with department filter
+- **WHEN** searching "statistics" in department STAT
+- **THEN** every result is a STAT course whose code or title contains "statistics"
+
+### Requirement: Course codes are detected in pasted text
+The system SHALL find every course code pattern in counselor notes, look each one up, and report each distinct code once with its lookup result.
+
+#### Scenario: Notes name two classes, one fake
+- **WHEN** the notes contain "Take BUS-K 201" and "BUS-M 999"
+- **THEN** detection reports BUS-K 201 as found and BUS-M 999 as not in catalog

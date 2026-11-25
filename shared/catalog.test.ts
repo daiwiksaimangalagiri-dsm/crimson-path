@@ -2,8 +2,16 @@ import { describe, expect, it } from "vitest";
 import { catalog, detectCodes, lookupCode, parseCodes, searchCourses, suggestCourses } from "./catalog.ts";
 
 describe("catalog", () => {
-  it("loads every undergraduate course", () => {
-    expect(catalog.courses).toHaveLength(3407);
+  it("loads the undergraduate catalog with credits on every course", () => {
+    expect(catalog.courses.length).toBeGreaterThan(6000);
+    expect(catalog.courses.every((c) => c.credits !== "")).toBe(true);
+  });
+
+  it("knows each course's GenEd areas and can search by area", () => {
+    expect(lookupCode(catalog, "MATH-M 118").course?.gened).toEqual(expect.arrayContaining(["N&M", "Mathematical Modeling"]));
+    const ah = searchCourses(catalog, { query: "literature", gened: "A&H" });
+    expect(ah.length).toBeGreaterThan(0);
+    for (const c of ah) expect(c.gened).toContain("A&H");
   });
 
   it.each(["csci c200", "CSCI-C 200", "CSCI C200", "csci-c200"])("finds %s", (raw) => {
@@ -12,8 +20,10 @@ describe("catalog", () => {
     expect(r.course?.code).toBe("CSCI-C 200");
   });
 
-  it("resolves a code missing its letter when only one course matches", () => {
-    expect(lookupCode(catalog, "INFO 101").course?.code).toBe("INFO-I 101");
+  it("offers candidates for a code missing its letter", () => {
+    const r = lookupCode(catalog, "INFO 101");
+    expect(r.status).toBe("similar"); // INFO-I 101 and the honors INFO-H 101
+    expect(r.candidates?.map((c) => c.code)).toContain("INFO-I 101");
   });
 
   it("reports codes that aren't in the catalog", () => {

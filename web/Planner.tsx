@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import termRows from "../shared/data/terms.json" with { type: "json" };
-import { catalog, firstNum, norm } from "../shared/catalog.ts";
+import { catalog, firstNum, GENED_AREAS, genedOf, norm } from "../shared/catalog.ts";
 import { upcomingTerms } from "../shared/programs.ts";
 import type { ChatMessage, Detected, Mode, Plan, Profile } from "../shared/schemas.ts";
 import { createChatReply, createRoadmap } from "./api.ts";
@@ -40,6 +40,13 @@ export function progressOf(plan: Plan, profile: Profile, now: Date) {
   const end = terms.indexOf(profile.gradTerm);
   const left = end < 0 ? null : terms.slice(0, end + 1).filter((t) => !t.startsWith("Summer")).length;
   return { taken, planned, left };
+}
+
+// Classes per GenEd area, from classes already taken and classes in this plan.
+export function genedCoverage(plan: Plan, profile: Profile) {
+  const taken = profile.taken.flatMap((c) => genedOf(catalog.byCode.get(norm(c))?.[0] ?? { attributes: "" }));
+  const planned = plan.semesters.flatMap((t) => t.items.flatMap((i) => i.gened));
+  return GENED_AREAS.map((area) => ({ area, taken: taken.filter((a) => a === area).length, planned: planned.filter((a) => a === area).length }));
 }
 
 export function Planner({ profile, onRetake, onEditTaken }: { profile: Profile; onRetake: () => void; onEditTaken: () => void }) {
@@ -107,7 +114,7 @@ export function Planner({ profile, onRetake, onEditTaken }: { profile: Profile; 
         </form>
 
         <dl className="sources">
-          <dt>Classes</dt><dd className="on">{catalog.courses.length.toLocaleString()} undergrad courses</dd>
+          <dt>Classes</dt><dd className="on">{catalog.courses.length.toLocaleString()} undergrad courses, with credits and GenEd areas</dd>
           <dt>Clubs</dt><dd>not loaded</dd>
           <dt>Events and workshops</dt><dd>not loaded</dd>
           <dt>Internships</dt><dd>not loaded</dd>
@@ -158,6 +165,18 @@ function Roadmap({ built, profile, onPlan }: { built: Built; profile: Profile; o
           <span className="muted">of {DEGREE_CREDITS} to graduate{prog.left !== null && `, ${prog.left} ${prog.left === 1 ? "semester" : "semesters"} until ${profile.gradTerm}`}</span>
         </p>
       </div>
+      <section className="gened" aria-label="GenEd areas covered">
+        <h3>GenEd areas</h3>
+        <ul>
+          {genedCoverage(plan, profile).map((g) => (
+            <li key={g.area} className={g.taken + g.planned ? "has" : ""}>
+              <b>{g.area}</b>
+              <span>{g.taken + g.planned ? `${g.taken ? `${g.taken} taken` : ""}${g.taken && g.planned ? ", " : ""}${g.planned ? `${g.planned} planned` : ""}` : "none yet"}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="muted small">From IU Bloomington's 2026–27 approved GenEd list. Check your exact requirements with your advisor.</p>
+      </section>
       <p className="figures">
         <span><b>{all.length}</b> classes over {plan.semesters.length} {plan.semesters.length === 1 ? "semester" : "semesters"}</span>
         {mode === "notes" && <span className="c"><b>{nC}</b> counselor's picks</span>}
@@ -183,7 +202,7 @@ function Roadmap({ built, profile, onPlan }: { built: Built; profile: Profile; o
                     <div className="node" aria-hidden="true" />
                     <h3>{t.term}</h3>
                     <p className="when">{TERM_SHORT.get(t.term) || "Dates: check One.IU"}</p>
-                    <p className="load">{cr} of about {target} credits from this plan</p>
+                    <p className={`load${cr > target ? " over" : ""}`}>{cr} credits planned{cr > target ? `, over your ${target}-credit target` : ` of about ${target}`}</p>
                     <ul>{t.items.map((it) => (
                       <li key={it.code + it.name}>
                         <details className={`class ${it.origin === "counselor" ? "c" : "s"}`}>
@@ -191,6 +210,7 @@ function Roadmap({ built, profile, onPlan }: { built: Built; profile: Profile; o
                             <i className={`stop ${it.origin === "counselor" ? "c" : "s"}`} aria-label={it.origin === "counselor" ? "Counselor's pick" : "Suggested for you"} />
                             <span className="code">{it.code}</span><span className="cr">{it.credits} cr</span>
                             <span className="name">{it.name.toLowerCase()}</span>
+                            {it.gened.length > 0 && <span className="ge">{it.gened.map((g) => <em key={g}>{g}</em>)}</span>}
                           </summary>
                           <p><b>Deadline</b> {it.deadline}</p>
                           <p><b>Why</b> {it.reason}</p>

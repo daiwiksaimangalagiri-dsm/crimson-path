@@ -9,7 +9,9 @@ const today = (now: Date): string => now.toLocaleDateString("en-US", { month: "l
 const calendar = (now: Date): string =>
   `Today is ${today(now)}. Upcoming terms: ${terms.map((t) => (t.dates ? `${t.term} (${t.dates})` : t.term)).join(", ")}.`;
 
-const FILES = `Files available: ONLY "Classes" (IU course catalog: code, title, credits; most entries do not list which terms they are offered). There is NO file of clubs, workshops, events, or internships.`;
+const FILES = `Files available: ONLY "Classes" (IU Bloomington undergraduate catalog: code, title, credits, and the IU Bloomington GenEd areas each course is approved for: A&H, S&H, N&M, World Cultures, World Languages, English Composition, Mathematical Modeling; most entries do not list which terms they are offered). There is NO file of clubs, workshops, events, or internships.
+
+CREDITS AND GENED: keep each term's total credits from this plan within the student's preferred load, counting each class's credits from the tools. When a class fits the advice and also fills a GenEd area, prefer it, and mention the area in its "reason". Use search_courses with "gened" to find courses for a specific area.`;
 
 const SHAPE = `Return ONLY JSON, no prose, in this shape:
 {"profile_summary":"...","suggestions":["..."],

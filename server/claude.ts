@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodTool } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { z } from "zod";
-import { listDepartments, lookupCode, searchCourses, type Catalog } from "../shared/catalog.ts";
+import { GENED_AREAS, listDepartments, lookupCode, searchCourses, type Catalog } from "../shared/catalog.ts";
 import type { ErrorCode } from "../shared/schemas.ts";
 
 export class AppError extends Error {
@@ -26,13 +26,14 @@ export function createAskClaude(cat: Catalog, apiKey: string): AskClaude {
     }),
     betaZodTool({
       name: "search_courses",
-      description: "Search the 'Classes' file (IU Bloomington undergraduate catalog). Returns up to 20 real courses matching words in the code or title. Use short keyword queries like 'programming', 'statistics', 'design'. Optionally filter by department code.",
+      description: "Search the 'Classes' file (IU Bloomington undergraduate catalog). Returns up to 20 real courses matching words in the code or title, each with its credits and GenEd areas. Use short keyword queries like 'programming', 'statistics', 'design'. Optionally filter by department code.",
       inputSchema: z.object({
         query: z.string(),
         dept: z.string().optional().describe("Department code, e.g. INFO, CSCI, STAT"),
         max_level: z.number().optional().describe("Highest course level, default 499"),
+        gened: z.enum(GENED_AREAS).optional().describe("Only courses approved for this IU Bloomington GenEd area"),
       }),
-      run: async ({ query, dept, max_level }) => JSON.stringify(searchCourses(cat, { query, dept: dept ?? "", maxLevel: max_level ?? 499 })),
+      run: async ({ query, dept, max_level, gened }) => JSON.stringify(searchCourses(cat, { query, dept: dept ?? "", maxLevel: max_level ?? 499, gened: gened ?? "" })),
     }),
     betaZodTool({
       name: "list_departments",

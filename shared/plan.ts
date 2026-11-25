@@ -1,4 +1,4 @@
-import { norm, type Catalog } from "./catalog.ts";
+import { genedOf, norm, type Catalog } from "./catalog.ts";
 import type { AdvisorItem, Detected, Mode, Plan, PlanItem } from "./schemas.ts";
 
 const key = (s: string): string => s.toUpperCase().replace(/[^A-Z0-9]/g, "");
@@ -40,7 +40,7 @@ export function checkPlan(cat: Catalog, plan: Plan, detected: Detected[], mode: 
       if (placed.has(id)) continue;
       placed.add(id);
       const origin = mode === "notes" && (it.origin === "counselor" || counselorCodes.has(hit.code)) ? "counselor" : "suggested";
-      items.push({ ...it, origin, name: hit.title, code: hit.code, credits: hit.credits, offered: hit.offered });
+      items.push({ ...it, origin, name: hit.title, code: hit.code, credits: hit.credits, offered: hit.offered, gened: genedOf(hit) });
     }
     return { term: t.term, items };
   }).filter((t) => t.items.length > 0);

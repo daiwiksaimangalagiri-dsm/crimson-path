@@ -6,10 +6,10 @@ const plan = {
   suggestions: ["Take INFO-I 201 next semester", "Take CSCI-C 200 for programming", "Add a statistics class next fall", "Join a UX club"],
   semesters: [
     { term: "Spring 2027", items: [
-      { type: "class", origin: "counselor", name: "MATHEMATICAL FOUNDATIONS OF INFORMATICS", code: "INFO-I 201", deadline: "Before Spring 2027 classes begin (Jan 11, 2027)", reason: "Your coach named it as the next step after INFO-I 101.", fit: "", credits: "4", offered: "" },
-      { type: "class", origin: "counselor", name: "INTRODUCTION TO PROGRAMMING", code: "CSCI-C 200", deadline: "Before Spring 2027 classes begin (Jan 11, 2027)", reason: "UX roles often want some coding.", fit: "", credits: "4", offered: "" } ] },
+      { type: "class", origin: "counselor", name: "MATHEMATICAL FOUNDATIONS OF INFORMATICS", code: "INFO-I 201", deadline: "Before Spring 2027 classes begin (Jan 11, 2027)", reason: "Your coach named it as the next step after INFO-I 101.", fit: "", credits: "4", offered: "", gened: [] },
+      { type: "class", origin: "counselor", name: "INTRODUCTION TO PROGRAMMING", code: "CSCI-C 200", deadline: "Before Spring 2027 classes begin (Jan 11, 2027)", reason: "UX roles often want some coding.", fit: "", credits: "4", offered: "", gened: ["N&M", "Mathematical Modeling"] } ] },
     { term: "Fall 2027", items: [
-      { type: "class", origin: "suggested", name: "INTRODUCTION TO STATISTICS", code: "STAT-S 300", deadline: "Check One.IU for the registration date", reason: "Your coach asked for a stats class to analyze survey data.", fit: "Applied and light on theory.", credits: "4", offered: "" } ] },
+      { type: "class", origin: "suggested", name: "INTRODUCTION TO STATISTICS", code: "STAT-S 300", deadline: "Check One.IU for the registration date", reason: "Your coach asked for a stats class to analyze survey data.", fit: "Applied and light on theory.", credits: "3", offered: "", gened: ["N&M"] } ] },
   ],
   ask_advisor: [
     { need: "INFO-H 400", why: "Your counselor mentioned this, but it isn't in the catalog. Double-check the code with them." },

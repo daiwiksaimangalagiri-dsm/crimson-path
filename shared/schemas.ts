@@ -34,7 +34,7 @@ export const ProfileSchema = z.object({
 });
 export type Profile = z.infer<typeof ProfileSchema>;
 
-const CourseBriefSchema = z.object({ code: z.string(), title: z.string(), credits: z.string(), offered: z.string() });
+const CourseBriefSchema = z.object({ code: z.string(), title: z.string(), credits: z.string(), offered: z.string(), gened: z.array(z.string()).default([]) });
 export type CourseBrief = z.infer<typeof CourseBriefSchema>;
 
 export const DetectedSchema = z.object({
@@ -59,6 +59,7 @@ export const PlanItemSchema = z.object({
   fit: str,
   credits: str,
   offered: str,
+  gened: z.array(z.string()).catch([]),
 });
 export type PlanItem = z.infer<typeof PlanItemSchema>;
 

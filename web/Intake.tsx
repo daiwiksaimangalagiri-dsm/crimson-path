@@ -263,6 +263,7 @@ export function Taken({ profile, onBack, onDone }: { profile: Profile; onBack: (
       <ul className="chips">
         {taken.map((c) => (
           <li key={c} className="chip"><b>{c}</b> {catalog.byCode.get(norm(c))?.[0]?.title.toLowerCase()}
+            <span className="muted"> {catalog.byCode.get(norm(c))?.[0]?.credits} cr</span>
             <button type="button" aria-label={`Remove ${c}`} onClick={() => setTaken(taken.filter((x) => x !== c))}>×</button></li>
         ))}
         {other.map((c) => (

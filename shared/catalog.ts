@@ -20,7 +20,14 @@ export function createCatalog(data: unknown): Catalog {
 
 export const catalog: Catalog = createCatalog(rows);
 
-export const brief = (c: Course): CourseBrief => ({ code: c.code, title: c.title, credits: c.credits, offered: c.offered || "not listed" });
+export const GENED_AREAS = ["A&H", "S&H", "N&M", "World Cultures", "World Languages", "English Composition", "Mathematical Modeling"] as const;
+// GenEd areas for a course; the attributes column holds them first, comma-separated.
+export const genedOf = (c: { attributes: string }): string[] =>
+  c.attributes.split(", ").filter((a): a is (typeof GENED_AREAS)[number] => (GENED_AREAS as readonly string[]).includes(a));
+
+export const brief = (c: Course): CourseBrief => ({
+  code: c.code, title: c.title, credits: c.credits, offered: c.offered || "not listed", gened: genedOf(c),
+});
 
 // Loose formats: "INFO-I 101", "INFO I101", "info i 101", "INFO 101", "I101".
 export function lookupCode(cat: Catalog, raw: string): Lookup {
@@ -58,12 +65,13 @@ export const parseCodes = (text: string): string[] =>
 
 const STOP = new Set(["the", "and", "of", "to", "in", "a", "for", "intro", "introduction", "course", "class", "i", "ii"]);
 
-export function searchCourses(cat: Catalog, { query, dept = "", maxLevel = 499 }: { query: string; dept?: string; maxLevel?: number }): CourseBrief[] {
+export function searchCourses(cat: Catalog, { query, dept = "", maxLevel = 499, gened = "" }: { query: string; dept?: string; maxLevel?: number; gened?: string }): CourseBrief[] {
   const words = query.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w && !STOP.has(w));
   const d = dept.toUpperCase();
   const scored: [number, Course][] = [];
   for (const c of cat.courses) {
     if (d && c.dept !== d) continue;
+    if (gened && !genedOf(c).includes(gened as (typeof GENED_AREAS)[number])) continue;
     const lvl = level(c.code);
     if (lvl > maxLevel) continue;
     const hay = `${c.code} ${c.title}`.toLowerCase();

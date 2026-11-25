@@ -18,3 +18,7 @@ node_modules/
 
 # Raw Handshake exports
 scripts/collect/raw/
+
+# Playwright test output
+e2e/.results/
+playwright-report/

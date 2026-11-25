@@ -7,7 +7,7 @@ Provides the IU Bloomington undergraduate course list as the only source of clas
 ## ADDED Requirements
 
 ### Requirement: Catalog is the only source of classes
-The system SHALL load the undergraduate course list (3,407 courses, levels 100–499) with code, title and credits, plus terms offered and attributes where present, and SHALL never show or recommend a class that is not in it.
+The system SHALL load the IU Bloomington undergraduate course list (levels 100–499: the original catalog paste plus courses from IU's public course API) with code, title and credits for every course, plus terms offered where present, and SHALL never show or recommend a class that is not in it.
 
 #### Scenario: Catalog loaded
 - **WHEN** the roadmap screen opens
@@ -17,6 +17,13 @@ The system SHALL load the undergraduate course list (3,407 courses, levels 100�
 - **WHEN** the course list can't be loaded
 - **THEN** the system shows "The course list didn't load. Refresh the page to try again." and disables roadmap building
 
+### Requirement: Courses carry their GenEd areas
+Each course SHALL list the IU Bloomington GenEd areas it is approved for (A&H, S&H, N&M, World Cultures, World Languages, English Composition, Mathematical Modeling), from IU's approved GenEd list, and the AI's course search SHALL be able to filter by area.
+
+#### Scenario: Search by area
+- **WHEN** the AI searches "literature" with area A&H
+- **THEN** every result is approved for A&H
+
 ### Requirement: Code lookup accepts loose formats
 The system SHALL resolve a course code written as "INFO-I 101", "INFO I101", "info i 101", "INFO 101" or "I101", and SHALL report one of: found, similar (with up to 8 candidates), not in catalog, or not a code.
 
@@ -25,8 +32,8 @@ The system SHALL resolve a course code written as "INFO-I 101", "INFO I101", "in
 - **THEN** the result is found, with CSCI-C 200 and its title and credits
 
 #### Scenario: Missing letter
-- **WHEN** looking up "INFO 101" and exactly one INFO course is numbered 101
-- **THEN** the result is found with that course
+- **WHEN** looking up "INFO 101", which matches INFO-I 101 and the honors INFO-H 101
+- **THEN** the result is similar, listing both
 
 #### Scenario: Code not in catalog
 - **WHEN** looking up "BUS-M 999"

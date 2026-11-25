@@ -78,7 +78,7 @@ Filled in by task 6.3. Outline: create a Google Cloud project, enable the Drive 
 
 | File | Source | How it's refreshed |
 |---|---|---|
-| `shared/data/courses.json` | IU course catalog paste, 3,407 undergrad courses | Copied from the research folder (task 2.1) |
+| `shared/data/courses.json` | 6,601 IU Bloomington undergrad courses: the original catalog paste (3,407) plus 3,194 from IU's public course API, with official credits and 2026–27 GenEd areas from gened.indiana.edu | `node scripts/collect/courses.ts` (keeps every original course; no login; fails loudly if sources change) |
 | `shared/data/programs.json` | IU Bloomington majors (IU's public degree API) and minors (College of Arts and Sciences bulletin, including minors from other schools) | `node scripts/collect/programs.ts` (no login; fails loudly if the sources change) |
 | `shared/data/terms.json` | Known term dates (Spring 2027 only so far) | Edit by hand from the Registrar's academic calendar |
 | `shared/data/clubs.json` | beINvolved public listings | `scripts/collect/clubs.ts` (task 5.1) |

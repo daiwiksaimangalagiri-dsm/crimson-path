@@ -29,6 +29,8 @@ Each group is a milestone. When a group is done and `npm run check` passes, comm
 - [x] 4b.1 Collect IU Bloomington majors and minors (`scripts/collect/programs.ts`) and add school, graduation term and summer-plan questions with school-filtered pickers. Verify `shared/programs.test.ts` and the intake tests
 - [x] 4b.2 Add the welcome screen, quiz question list, graduation progress bar and print stylesheet. Verify `npm run e2e` and screenshots at 375px and 1280px
 
+- [x] 4b.3 Add official credits, GenEd areas and missing undergrad courses (`scripts/collect/courses.ts`); show GenEd tags, area coverage and per-term credit checks. Verify catalog tests and e2e screenshots
+
 ## 5. Campus opportunities data
 
 - [ ] 5.1 Write `scripts/collect/clubs.ts` (beINvolved) and `scripts/collect/events.ts` (IU events, upcoming only). Commit their JSON. Verify every entry has a `url` and a `collectedAt`

@@ -81,6 +81,17 @@ The roadmap SHALL show the student's progress toward 120 credits: credits from c
 - **WHEN** a student who took INFO-I 101 (4 credits) builds a plan with 11 credits
 - **THEN** the roadmap shows 4 credits taken and 11 planned toward 120
 
+### Requirement: Credits and GenEd shown on the plan
+The roadmap SHALL show each class's credits and GenEd areas, each semester's planned credits against the student's preferred load (flagged when over), and how many classes cover each GenEd area across taken and planned classes.
+
+#### Scenario: Over the load
+- **WHEN** a semester's planned credits exceed the student's preferred load
+- **THEN** that semester says it is over the target
+
+#### Scenario: GenEd coverage
+- **WHEN** the student took INFO-I 101 (N&M) and the plan adds STAT-S 300 (N&M)
+- **THEN** N&M shows 1 taken and 1 planned
+
 ### Requirement: Build failures are explained
 The system SHALL show a specific message when a build fails, and SHALL re-enable the Build button.
 

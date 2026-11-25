@@ -100,8 +100,11 @@ export type RoadmapResponse = z.infer<typeof RoadmapResponseSchema>;
 export const ChatResponseSchema = z.object({ reply: z.string(), plan: PlanSchema.nullable() });
 export type ChatResponse = z.infer<typeof ChatResponseSchema>;
 
-export const ErrorCodeSchema = z.enum(["invalid_request", "no_api_key", "rate_limited", "ai_unreadable", "ai_unavailable"]);
+export const ErrorCodeSchema = z.enum(["invalid_request", "no_api_key", "bad_api_key", "rate_limited", "ai_unreadable", "ai_unavailable"]);
 export type ErrorCode = z.infer<typeof ErrorCodeSchema>;
 export const ErrorResponseSchema = z.object({ error: z.object({ code: ErrorCodeSchema, message: z.string() }) });
 
 export const SourcesSchema = z.object({ courses: z.number() });
+
+export const TermSchema = z.object({ term: z.string(), dates: z.string(), short: z.string() });
+export type Term = z.infer<typeof TermSchema>;

@@ -1,8 +1,11 @@
 # CLAUDE.md
 
-crimson-path: TODO, one line on what this project is.
+crimson-path: CrimsonPath, a career roadmap prototype for IU Bloomington students. It turns a quiz, classes taken, and counselor notes or interests into a checked semester-by-semester plan using the Claude API. It's a prototype: build the smallest thing that meets the spec.
 
-- TODO: one line per top-level folder (stack, version, purpose). Name the single source of truth for shared types or contracts.
+- Planned in `openspec/changes/rebuild-crimsonpath-prototype/`: `web/` (Vite + React 19 + TS, UI), `server/` (Node 24 `http`, runs `.ts` directly, calls Claude), `shared/` (zod schemas, catalog and plan rules, data files). `shared/` is the single source of truth for types and contracts.
+- `.research/`: the original claude.ai app, course data and chat log. Local only, gitignored, read-only reference.
+- `docs/setup.md`: the handoff guide. Every tool, install, secret and data source.
+- `.claude/agents/lead.md`: lead persona. `claude --agent lead` runs a change's tasks and pushes each milestone.
 - `.mcp.json`: project MCP config. `playwright-chrome` runs Playwright MCP against real Google Chrome.
 - Machine setup and tool rationale: see `/Users/daiwik/IU_Workspace/initial_setup/docs/intitial_setup.md`.
 
@@ -155,7 +158,10 @@ Read this before exploring the codebase. If you catch yourself searching for som
 
 | You need | Look in |
 |----------|---------|
+| Setting up this project on a new machine | `docs/setup.md` |
 | Installed tools and how to verify them | `/Users/daiwik/IU_Workspace/initial_setup/docs/intitial_setup.md` |
+| What the prototype must do | `openspec/changes/rebuild-crimsonpath-prototype/specs/` |
+| Original behavior to match | `.research/app/index.html` |
 | Project MCP servers | `.mcp.json` |
 
 ## Keeping this file current
@@ -176,3 +182,7 @@ Keep this file under 500 lines. When a section grows too big, move it to a neste
 - Project MCP servers show "Pending approval" in `claude mcp list` until a session in this folder approves them. Don't report them as connected until then.
 - `playwright-cli find` returns nested nodes, not always the clickable ref. Get the ref from the snapshot `.yml` it writes.
 - Playwright writes snapshots and screenshots to `.playwright-mcp/` and `.playwright-cli/`. Keep them out of git.
+- Record every install, secret or setup step in `docs/setup.md` in the same commit, so a teammate can set up from a clean machine.
+- Push to `main` after every milestone (a finished task group with checks passing). The repo owner is `daiwiksaimangalagiri-dsm`, so run `gh auth switch -u daiwiksaimangalagiri-dsm` before pushing and switch back after.
+- The repo is public. Never commit `.env`, `.research/` or raw Handshake exports.
+- This is a prototype. Keep the scope small: one test file per module, no extra polish, no features beyond the spec.

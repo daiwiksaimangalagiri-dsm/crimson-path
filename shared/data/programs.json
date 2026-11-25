@@ -1,0 +1,2826 @@
+{
+ "collectedAt": "2026-11-25",
+ "sources": [
+  "https://exdd-academics.webapps.iu.edu/api/public/v1/endpoint/degrees?campus=bloomington&program_type=2",
+  "https://bulletin.college.indiana.edu/programs/?programs-filter-type=minor",
+  "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+ ],
+ "majors": [
+  {
+   "name": "Accounting",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/accounting.html"
+  },
+  {
+   "name": "African American & African Diaspora St/Religious Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-st+religious-studies.html"
+  },
+  {
+   "name": "African American & African Diaspora St/Religious Studies (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-st+religious-studies-(intrdscst-ba).html"
+  },
+  {
+   "name": "African American & African Diaspora Studies (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-studies-(intrdscst-ba).html"
+  },
+  {
+   "name": "African American & African Diaspora Studies/English",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-studies+english.html"
+  },
+  {
+   "name": "African American & African Diaspora Studies/English (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-studies+english-(intrdscst-ba).html"
+  },
+  {
+   "name": "African American & African Diaspora Studies/History",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-studies+history.html"
+  },
+  {
+   "name": "African American & African Diaspora Studies/History (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-studies+history-(intrdscst-ba).html"
+  },
+  {
+   "name": "African American & African Diaspora Studies/Sociology",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-studies+sociology.html"
+  },
+  {
+   "name": "African American & African Diaspora Studies/Sociology (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/african-american-and-african-diaspora-studies+sociology-(intrdscst-ba).html"
+  },
+  {
+   "name": "American Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/american-studies.html"
+  },
+  {
+   "name": "Animal Behavior",
+   "degrees": [
+    "Bachelor of Science in Animal Behavior"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-animal-behavior.html"
+  },
+  {
+   "name": "Anthropology",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/anthropology.html"
+  },
+  {
+   "name": "Anthropology (Anthro BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/anthropology-(anthro-ba).html"
+  },
+  {
+   "name": "Anthropology/Linguistics",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/anthropology+linguistics.html"
+  },
+  {
+   "name": "Anthropology/Linguistics (Anthro BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/anthropology+linguistics-(anthro-ba).html"
+  },
+  {
+   "name": "Art History",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/art-history.html"
+  },
+  {
+   "name": "Art History (History BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/art-history-(history-ba).html"
+  },
+  {
+   "name": "Arts Management",
+   "degrees": [
+    "Bachelor of Science in Arts Management"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-arts-management.html"
+  },
+  {
+   "name": "Arts, Culture and World Languages Education",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/arts-culture-and-world-languages-education.html"
+  },
+  {
+   "name": "Astronomy/Astrophysics",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Astronomy and Astrophysics"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/astronomy+astrophysics.html"
+  },
+  {
+   "name": "Atmospheric Science",
+   "degrees": [
+    "Bachelor of Science in Atmospheric Science"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-atmospheric-science.html"
+  },
+  {
+   "name": "Atmospheric Science (EGE BS)",
+   "degrees": [
+    "Bachelor of Science in Earth, Geography, and the Environment"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-earth-geography-and-the-environment/atmospheric-science-(ege-bs).html"
+  },
+  {
+   "name": "Audio Engineering",
+   "degrees": [
+    "Bachelor of Science in Music Production"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-production/audio-engineering.html"
+  },
+  {
+   "name": "Audio Engineering/Creation and Production",
+   "degrees": [
+    "Bachelor of Science in Music Production"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-production/audio-engineering+creation-and-production.html"
+  },
+  {
+   "name": "Ballet",
+   "degrees": [
+    "Bachelor of Science in Ballet",
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-ballet.html"
+  },
+  {
+   "name": "Ballet (Dance BFA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/ballet-(dance-bfa).html"
+  },
+  {
+   "name": "Bassoon",
+   "degrees": [
+    "Bachelor of Music",
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music/bassoon.html"
+  },
+  {
+   "name": "Biochemistry",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Biochemistry"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/biochemistry.html"
+  },
+  {
+   "name": "Biology",
+   "degrees": [
+    "Bachelor of Science in Biology",
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-biology.html"
+  },
+  {
+   "name": "Biomedical Engineering",
+   "degrees": [
+    "Bachelor of Science in Biomedical Engineering"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-biomedical-engineering.html"
+  },
+  {
+   "name": "Biotechnology",
+   "degrees": [
+    "Bachelor of Science in Biotechnology",
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-biotechnology.html"
+  },
+  {
+   "name": "Bosnian, Serbian, and Croatian (LLC BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/bosnian-serbian-and-croatian-(llc-ba).html"
+  },
+  {
+   "name": "Business",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business.html"
+  },
+  {
+   "name": "Business Intelligence and Data Science",
+   "degrees": [
+    "Bachelor of Science in Business Intelligence and Data Science"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business-intelligence-and-data-science.html"
+  },
+  {
+   "name": "Cello",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/cello.html"
+  },
+  {
+   "name": "Central Eurasia (RCS BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/central-eurasia-(rcs-ba).html"
+  },
+  {
+   "name": "Chemistry",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Chemistry"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/chemistry.html"
+  },
+  {
+   "name": "Choral Teaching",
+   "degrees": [
+    "Bachelor of Music Education"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music-education/choral-teaching---guitar.html"
+  },
+  {
+   "name": "Cinematic Arts",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/cinematic-arts.html"
+  },
+  {
+   "name": "Clarinet",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field",
+    "Bachelor of Music"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/clarinet.html"
+  },
+  {
+   "name": "Classical Studies (History BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/classical-studies-(history-ba).html"
+  },
+  {
+   "name": "Clinical Psychological Science",
+   "degrees": [
+    "Bachelor of Science in Clinical Psychological Science"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-clinical-psychological-science.html"
+  },
+  {
+   "name": "Cognitive Sci (Psychology BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/cognitive-sci-(psychology-ba).html"
+  },
+  {
+   "name": "Cognitive Science",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Cognitive Science"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/cognitive-science.html"
+  },
+  {
+   "name": "Cognitive Science (Psychology BS)",
+   "degrees": [
+    "Bachelor of Science in Psychology"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-psychology/cognitive-science-(psychology-bs).html"
+  },
+  {
+   "name": "Community Health",
+   "degrees": [
+    "Bachelor of Science in Public Health"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-health/community-health.html"
+  },
+  {
+   "name": "Comparative Literature",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/comparative-literature.html"
+  },
+  {
+   "name": "Composition",
+   "degrees": [
+    "Bachelor of Music",
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music/composition.html"
+  },
+  {
+   "name": "Comprehensive Design",
+   "degrees": [
+    "Bachelor of Science in Comprehensive Design"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-comprehensive-design.html"
+  },
+  {
+   "name": "Computer Engineering",
+   "degrees": [
+    "Bachelor of Science in Computer Engineering"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-computer-engineering.html"
+  },
+  {
+   "name": "Computer Science",
+   "degrees": [
+    "Bachelor of Science in Computer Science",
+    "Bachelor of Arts"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-computer-science.html"
+  },
+  {
+   "name": "Computer Science/Philosophy",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/computer-science+philosophy.html"
+  },
+  {
+   "name": "Contemporary Dance (Dance BFA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/contemporary-dance-(dance-bfa).html"
+  },
+  {
+   "name": "Counseling and Student Services",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/counseling-and-student-services.html"
+  },
+  {
+   "name": "Creation and Production",
+   "degrees": [
+    "Bachelor of Science in Music Production"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-production/creation-and-production.html"
+  },
+  {
+   "name": "Criminology and Criminal Justice",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/criminology-and-criminal-justice.html"
+  },
+  {
+   "name": "Criminology and Criminal Justice (TSAP)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/criminology-and-criminal-justice-tsap.html"
+  },
+  {
+   "name": "Cybersecurity & Global Policy",
+   "degrees": [
+    "Bachelor of Science in Cybersecurity and Global Policy"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-cybersecurity-and-global-policy.html"
+  },
+  {
+   "name": "Czech (LLC BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/czech-(llc-ba).html"
+  },
+  {
+   "name": "Dance BFA",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/dance-bfa.html"
+  },
+  {
+   "name": "Data Science",
+   "degrees": [
+    "Bachelor of Science in Data Science"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-data-science.html"
+  },
+  {
+   "name": "Dietetics",
+   "degrees": [
+    "Bachelor of Science in Applied Health Science"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-applied-health-science/dietetics.html"
+  },
+  {
+   "name": "Double Bass",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/double-bass.html"
+  },
+  {
+   "name": "Early Childhood Education",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/early-childhood-education.html"
+  },
+  {
+   "name": "Early Music",
+   "degrees": [
+    "Bachelor of Music"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music/early-music---instrumental.html"
+  },
+  {
+   "name": "Early Music Instrument",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/early-music-instrument.html"
+  },
+  {
+   "name": "Early Music Voice",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/early-music-voice.html"
+  },
+  {
+   "name": "Earth and Atmospheric Sciences",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/earth-and-atmospheric-sciences.html"
+  },
+  {
+   "name": "Earth and Atmospheric Sciences (EGE BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/earth-and-atmospheric-sciences-(ege-ba).html"
+  },
+  {
+   "name": "Earth Science",
+   "degrees": [
+    "Bachelor of Science in Earth Science"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-earth-science.html"
+  },
+  {
+   "name": "Earth Science (EGE BS)",
+   "degrees": [
+    "Bachelor of Science in Earth, Geography, and the Environment"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-earth-geography-and-the-environment/earth-science-(ege-bs).html"
+  },
+  {
+   "name": "East Asia (RCS BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/east-asia-(rcs-ba).html"
+  },
+  {
+   "name": "East Asian Languages & Cultures",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/east-asian-languages-and-cultures.html"
+  },
+  {
+   "name": "Economic Consulting",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/economic-consulting.html"
+  },
+  {
+   "name": "Economics",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/economics.html"
+  },
+  {
+   "name": "Economics and Quantitative Methods",
+   "degrees": [
+    "Bachelor of Science in Economics and Quantitative Methods"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-economics-and-quantitative-methods.html"
+  },
+  {
+   "name": "Economics/Mathematics",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/economics+mathematics.html"
+  },
+  {
+   "name": "Economics/Political Science",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/economics+political-science.html"
+  },
+  {
+   "name": "Elementary Education",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/elementary-education.html"
+  },
+  {
+   "name": "English",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/english.html"
+  },
+  {
+   "name": "English/African American & African Diaspora Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/english+african-american-and-african-diaspora-studies.html"
+  },
+  {
+   "name": "Entrepreneurship and Corporate Innovation",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/entrepreneurship-and-corporate-innovation.html"
+  },
+  {
+   "name": "Environmental & Sustainability Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/environmental-and-sustainability-studies.html"
+  },
+  {
+   "name": "Environmental Geoscience",
+   "degrees": [
+    "Bachelor of Science in Environmental Geoscience"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-environmental-geoscience.html"
+  },
+  {
+   "name": "Environmental Geoscience (EGE BS)",
+   "degrees": [
+    "Bachelor of Science in Earth, Geography, and the Environment"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-earth-geography-and-the-environment/environmental-geoscience-(ege-bs).html"
+  },
+  {
+   "name": "Environmental Health",
+   "degrees": [
+    "Bachelor of Science in Public Health"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-health/environmental-health.html"
+  },
+  {
+   "name": "Environmental Management",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/environmental-management.html"
+  },
+  {
+   "name": "Environmental Science",
+   "degrees": [
+    "Bachelor of Science in Environmental Science"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-environmental-science.html"
+  },
+  {
+   "name": "Epidemiology",
+   "degrees": [
+    "Bachelor of Science in Public Health"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-health/epidemiology.html"
+  },
+  {
+   "name": "Euphonium",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/euphonium.html"
+  },
+  {
+   "name": "Exercise Science",
+   "degrees": [
+    "Bachelor of Science in Kinesiology"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-kinesiology/exercise-science.html"
+  },
+  {
+   "name": "Fashion Design",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/fashion-design.html"
+  },
+  {
+   "name": "Finance",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/finance.html"
+  },
+  {
+   "name": "Flute",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field",
+    "Bachelor of Music"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/flute.html"
+  },
+  {
+   "name": "Folklore & Ethnomusicology",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/folklore-and-ethnomusicology.html"
+  },
+  {
+   "name": "Folklore & Ethnomusicology (Anthro BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/folklore-and-ethnomusicology-(anthro-ba).html"
+  },
+  {
+   "name": "French",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/french.html"
+  },
+  {
+   "name": "Game Design",
+   "degrees": [
+    "Bachelor of Science in Game Design"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-game-design.html"
+  },
+  {
+   "name": "Gender Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/gender-studies.html"
+  },
+  {
+   "name": "Gender Studies (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/gender-studies-(intrdscst-ba).html"
+  },
+  {
+   "name": "General Music",
+   "degrees": [
+    "Bachelor of Music Education"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music-education/general-music---bassoon.html"
+  },
+  {
+   "name": "Geography",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Geography"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/geography.html"
+  },
+  {
+   "name": "Geography (EGE BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/geography-(ege-ba).html"
+  },
+  {
+   "name": "Geography (EGE BS)",
+   "degrees": [
+    "Bachelor of Science in Earth, Geography, and the Environment"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-earth-geography-and-the-environment/geography-(ege-bs).html"
+  },
+  {
+   "name": "Germanic Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/germanic-studies.html"
+  },
+  {
+   "name": "Global Health",
+   "degrees": [
+    "Bachelor of Science in Public Health"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-health/global-health.html"
+  },
+  {
+   "name": "Global Media",
+   "degrees": [
+    "Bachelor of Science in Global Media"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-global-media.html"
+  },
+  {
+   "name": "Guitar",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/guitar.html"
+  },
+  {
+   "name": "Harp",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/harp.html"
+  },
+  {
+   "name": "Healthcare Management & Policy",
+   "degrees": [
+    "Bachelor of Science in Healthcare Management and Policy"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-healthcare-management-and-policy.html"
+  },
+  {
+   "name": "Hispanic Literature and Culture (Spanish & Portuguese Major)",
+   "degrees": [
+    "Master of Legal Studies"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/master-of-legal-studies/hispanic-literature-and-culture-(spanish-and-portuguese-major).html"
+  },
+  {
+   "name": "Historical Performance",
+   "degrees": [
+    "Bachelor of Music",
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music/historical-performance---instrumental.html"
+  },
+  {
+   "name": "History",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/history.html"
+  },
+  {
+   "name": "History (History BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/history-(history-ba).html"
+  },
+  {
+   "name": "History/African American & African Diaspora Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/history+african-american-and-african-diaspora-studies.html"
+  },
+  {
+   "name": "History/African American & African Diaspora Studies (History BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/history+african-american-and-african-diaspora-studies-(history-ba).html"
+  },
+  {
+   "name": "Horn",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/horn.html"
+  },
+  {
+   "name": "Human Biology",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Human Biology"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/human-biology.html"
+  },
+  {
+   "name": "Human Development and Family Studies",
+   "degrees": [
+    "Bachelor of Science in Applied Health Science"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-applied-health-science/human-development-and-family-studies.html"
+  },
+  {
+   "name": "Human Resource Management",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/human-resource-management.html"
+  },
+  {
+   "name": "Individualized Major",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/individualized-major.html"
+  },
+  {
+   "name": "Individualized Major (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/individualized-major-(intrdscst-ba).html"
+  },
+  {
+   "name": "Informatics",
+   "degrees": [
+    "Bachelor of Science in Informatics"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-informatics-accelerated.html"
+  },
+  {
+   "name": "Information Systems",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/information-systems.html"
+  },
+  {
+   "name": "Instrumental Band",
+   "degrees": [
+    "Bachelor of Music Education"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music-education/instrumental-band---bassoon.html"
+  },
+  {
+   "name": "Instrumental Jazz",
+   "degrees": [
+    "Bachelor of Music Education"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music-education/instrumental-jazz---double-bass.html"
+  },
+  {
+   "name": "Instrumental String",
+   "degrees": [
+    "Bachelor of Music Education"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music-education/instrumental-string---bassoon.html"
+  },
+  {
+   "name": "Intelligent Systems Engineering",
+   "degrees": [
+    "Bachelor of Science in Intelligent Systems Engineering"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-intelligent-systems-engineering.html"
+  },
+  {
+   "name": "Interdept Mathematics Major: Mathematics/Economics",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/interdept-mathematics-major:-mathematics+economics.html"
+  },
+  {
+   "name": "Interior Design",
+   "degrees": [
+    "Bachelor of Science in Interior Design"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-interior-design.html"
+  },
+  {
+   "name": "International Financial Governance, Trade and Development",
+   "degrees": [
+    "Bachelor of Science in International Financial Governance, Trade and Development"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-international-financial-governance-trade-and-development.html"
+  },
+  {
+   "name": "International Law and Institutions",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/international-law-and-institutions.html"
+  },
+  {
+   "name": "International Studies",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in International Studies"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/international-studies.html"
+  },
+  {
+   "name": "Italian",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/italian.html"
+  },
+  {
+   "name": "Jazz",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field",
+    "Bachelor of Music"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/jazz---double-bass.html"
+  },
+  {
+   "name": "Jewish Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/jewish-studies.html"
+  },
+  {
+   "name": "Journalism",
+   "degrees": [
+    "Bachelor of Arts in Journalism"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts-in-journalism.html"
+  },
+  {
+   "name": "Labor Studies (100% online)",
+   "degrees": [
+    "Bachelor of Science in Labor Studies"
+   ],
+   "school": "School of Social Work",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-labor-studies-online.html"
+  },
+  {
+   "name": "Law & Public Policy",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/law-and-public-policy.html"
+  },
+  {
+   "name": "Liberal Studies",
+   "degrees": [
+    "Bachelor of Liberal Studies"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-liberal-studies.html"
+  },
+  {
+   "name": "Linguistics",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/linguistics.html"
+  },
+  {
+   "name": "Linguistics/Anthropology",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/linguistics+anthropology.html"
+  },
+  {
+   "name": "Management",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/management.html"
+  },
+  {
+   "name": "Management (TSAP)",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/management-tsap.html"
+  },
+  {
+   "name": "Management and Human Organization",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/management-and-human-organization.html"
+  },
+  {
+   "name": "Management and Human Organization (IntrdscSt BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/management-and-human-organization-(intrdscst-ba).html"
+  },
+  {
+   "name": "Marketing",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/marketing.html"
+  },
+  {
+   "name": "Marketing and Professional Sales",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/marketing-and-professional-sales.html"
+  },
+  {
+   "name": "Mathematics",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Mathematics"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/mathematics.html"
+  },
+  {
+   "name": "Mathematics (Mathematics BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/mathematics-(mathematics-ba).html"
+  },
+  {
+   "name": "Mathematics and Data Science",
+   "degrees": [
+    "Bachelor of Science in Mathematics and Data Science"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-mathematics-and-data-science.html"
+  },
+  {
+   "name": "Media",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/media.html"
+  },
+  {
+   "name": "Media Advertising",
+   "degrees": [
+    "Bachelor of Science in Media Advertising"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-media-advertising.html"
+  },
+  {
+   "name": "Merchandising",
+   "degrees": [
+    "Bachelor of Science in Merchandising"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-merchandising.html"
+  },
+  {
+   "name": "Microbiology",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Microbiology"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/microbiology.html"
+  },
+  {
+   "name": "Middle East (RCS BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/middle-east-(rcs-ba).html"
+  },
+  {
+   "name": "Molecular Life Sciences",
+   "degrees": [
+    "Bachelor of Science in Molecular Life Sciences"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-molecular-life-sciences.html"
+  },
+  {
+   "name": "Music Business",
+   "degrees": [
+    "Bachelor of Science in Music Business"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-business.html"
+  },
+  {
+   "name": "Musical Theatre BFA",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/musical-theatre-bfa.html"
+  },
+  {
+   "name": "Neuroscience",
+   "degrees": [
+    "Bachelor of Science in Neuroscience"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-neuroscience.html"
+  },
+  {
+   "name": "Nonprofit Management & Leadership",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/nonprofit-management-and-leadership.html"
+  },
+  {
+   "name": "Nursing",
+   "degrees": [
+    "Bachelor of Science in Nursing"
+   ],
+   "school": "School of Nursing",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-nursing.html"
+  },
+  {
+   "name": "Nursing (100% online)",
+   "degrees": [
+    "Bachelor of Science in Nursing"
+   ],
+   "school": "School of Nursing",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-nursing-online.html"
+  },
+  {
+   "name": "Nursing (100% online) (TSAP)",
+   "degrees": [
+    "Bachelor of Science in Nursing"
+   ],
+   "school": "School of Nursing",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-nursing-online-tsap.html"
+  },
+  {
+   "name": "Nutrition Science",
+   "degrees": [
+    "Bachelor of Science in Applied Health Science"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-applied-health-science/nutrition-science.html"
+  },
+  {
+   "name": "Oboe",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field",
+    "Bachelor of Music"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/oboe.html"
+  },
+  {
+   "name": "Operations Management",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/operations-management.html"
+  },
+  {
+   "name": "Organ",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/organ.html"
+  },
+  {
+   "name": "Parks, Recreation, and the Outdoors",
+   "degrees": [
+    "Bachelor of Science in Health & Wellness Design"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-health-and-wellness-design/parks-recreation-and-the-outdoors.html"
+  },
+  {
+   "name": "Percussion",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/percussion.html"
+  },
+  {
+   "name": "Performance",
+   "degrees": [
+    "Bachelor of Music"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-music/performance---bassoon.html"
+  },
+  {
+   "name": "Philosophy",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/philosophy.html"
+  },
+  {
+   "name": "Philosophy/Computer Science",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/philosophy+computer-science.html"
+  },
+  {
+   "name": "Philosophy/Political Science",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/philosophy+political-science.html"
+  },
+  {
+   "name": "Philosophy/Religious Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/philosophy+religious-studies.html"
+  },
+  {
+   "name": "Physics",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Physics"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/physics.html"
+  },
+  {
+   "name": "Piano",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/piano.html"
+  },
+  {
+   "name": "Policy Analysis",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/policy-analysis.html"
+  },
+  {
+   "name": "Polish (LLC BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/polish-(llc-ba).html"
+  },
+  {
+   "name": "Political Science",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/political-science.html"
+  },
+  {
+   "name": "Psychology",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Psychology"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/psychology.html"
+  },
+  {
+   "name": "Psychology (Psychology BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/psychology-(psychology-ba).html"
+  },
+  {
+   "name": "Psychology (Psychology BS)",
+   "degrees": [
+    "Bachelor of Science in Psychology"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-psychology/psychology-(psychology-bs).html"
+  },
+  {
+   "name": "Public Financial Management",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/public-financial-management.html"
+  },
+  {
+   "name": "Public Management & Leadership",
+   "degrees": [
+    "Bachelor of Science in Public Affairs"
+   ],
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-affairs/public-management-and-leadership.html"
+  },
+  {
+   "name": "Public Policy Analysis",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/public-policy-analysis.html"
+  },
+  {
+   "name": "Public Relations",
+   "degrees": [
+    "Bachelor of Science in Public Relations"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-relations.html"
+  },
+  {
+   "name": "Real Estate",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/real-estate.html"
+  },
+  {
+   "name": "Recreational Therapy",
+   "degrees": [
+    "Bachelor of Science in Health & Wellness Design"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-health-and-wellness-design/recreational-therapy.html"
+  },
+  {
+   "name": "Relig Studies/African American &Afr Diaspora St (History BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/relig-studies+african-american-andafr-diaspora-st-(history-ba).html"
+  },
+  {
+   "name": "Religious Studies",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/religious-studies.html"
+  },
+  {
+   "name": "Religious Studies (History BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/religious-studies-(history-ba).html"
+  },
+  {
+   "name": "Religious Studies/Philosophy (History BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/religious-studies+philosophy-(history-ba).html"
+  },
+  {
+   "name": "Robotics",
+   "degrees": [
+    "Bachelor of Science in Robotics"
+   ],
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-robotics.html"
+  },
+  {
+   "name": "Russian (LLC BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/russian-(llc-ba).html"
+  },
+  {
+   "name": "Safety Management",
+   "degrees": [
+    "Bachelor of Science in Applied Health Science"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-applied-health-science/safety-management.html"
+  },
+  {
+   "name": "Saxophone",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field",
+    "Bachelor of Music"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/saxophone.html"
+  },
+  {
+   "name": "Secondary Education",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/secondary-education.html"
+  },
+  {
+   "name": "Secondary Education (TSAP)",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/secondary-education-tsap.html"
+  },
+  {
+   "name": "Sexual and Reproductive Health",
+   "degrees": [
+    "Bachelor of Science in Public Health"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-public-health/sexual-and-reproductive-health.html"
+  },
+  {
+   "name": "Slavic East European Languages & Cultures",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/slavic-east-european-languages-and-cultures.html"
+  },
+  {
+   "name": "Social Work",
+   "degrees": [
+    "Bachelor of Social Work"
+   ],
+   "school": "School of Social Work",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-social-work.html"
+  },
+  {
+   "name": "Sociology",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/sociology.html"
+  },
+  {
+   "name": "Spanish",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/spanish.html"
+  },
+  {
+   "name": "Special Education - Elementary",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/special-education---elementary.html"
+  },
+  {
+   "name": "Special Education - Secondary",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/special-education---secondary.html"
+  },
+  {
+   "name": "Speech, Language and Hearing Sciences",
+   "degrees": [
+    "Bachelor of Arts",
+    "Bachelor of Science in Speech, Language and Hearing Sciences"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/speech-language-and-hearing-sciences.html"
+  },
+  {
+   "name": "Sport Marketing & Management",
+   "degrees": [
+    "Bachelor of Science in Kinesiology"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-kinesiology/sport-marketing-and-management.html"
+  },
+  {
+   "name": "Sports Media",
+   "degrees": [
+    "Bachelor of Science in Sports Media"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-sports-media.html"
+  },
+  {
+   "name": "Statistics",
+   "degrees": [
+    "Bachelor of Science in Statistics"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-statistics.html"
+  },
+  {
+   "name": "Statistics (Mathematics BA)",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/statistics-(mathematics-ba).html"
+  },
+  {
+   "name": "Studio Art",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/studio-art.html"
+  },
+  {
+   "name": "Supply Chain Management",
+   "degrees": [
+    "Bachelor of Science in Business"
+   ],
+   "school": "Kelley School of Business",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-business/supply-chain-management.html"
+  },
+  {
+   "name": "Theatre & Drama",
+   "degrees": [
+    "Bachelor of Arts"
+   ],
+   "school": "College of Arts and Sciences",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-arts/theatre-and-drama.html"
+  },
+  {
+   "name": "Tourism, Hospitality & Event Management",
+   "degrees": [
+    "Bachelor of Science in Health & Wellness Design"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-health-and-wellness-design/tourism-hospitality-and-event-management.html"
+  },
+  {
+   "name": "Trombone",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/trombone.html"
+  },
+  {
+   "name": "Trumpet",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/trumpet.html"
+  },
+  {
+   "name": "Tuba",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/tuba.html"
+  },
+  {
+   "name": "Viola",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/viola.html"
+  },
+  {
+   "name": "Violin",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/violin.html"
+  },
+  {
+   "name": "Visual Arts Education",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/visual-arts-education.html"
+  },
+  {
+   "name": "Voice",
+   "degrees": [
+    "Bachelor of Science in Music and an Outside Field"
+   ],
+   "school": "Jacobs School of Music",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-music-and-an-outside-field/voice.html"
+  },
+  {
+   "name": "World Languages Education",
+   "degrees": [
+    "Bachelor of Science in Education"
+   ],
+   "school": "School of Education",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-education/world-languages-education.html"
+  },
+  {
+   "name": "Youth Development",
+   "degrees": [
+    "Bachelor of Science in Applied Health Science"
+   ],
+   "school": "School of Public Health",
+   "url": "https://academics.iu.edu/degrees/bloomington/bachelor-of-science-in-applied-health-science/youth-development.html"
+  }
+ ],
+ "minors": [
+  {
+   "name": "African American and African Diaspora Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/AAADSMIN/"
+  },
+  {
+   "name": "African Languages",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/AFRLNGMIN/"
+  },
+  {
+   "name": "African Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/AFRISTMIN/"
+  },
+  {
+   "name": "American Experience",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/AMEXPMIN/"
+  },
+  {
+   "name": "American Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/AMSTMIN/"
+  },
+  {
+   "name": "Animal Behavior",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ANBEHMIN/"
+  },
+  {
+   "name": "Animal-Computer Interaction",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Anthropology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ANTHMIN/"
+  },
+  {
+   "name": "Anthropology of Food",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/FOODMIN/"
+  },
+  {
+   "name": "Archaeology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ARCHMIN/"
+  },
+  {
+   "name": "Art History",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ARTHISTMIN/"
+  },
+  {
+   "name": "Arts Management",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Asian American Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/AASTMIN/"
+  },
+  {
+   "name": "Astronomy and Astrophysics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ASTMIN/"
+  },
+  {
+   "name": "Atmospheric Science",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ATSCIMIN/"
+  },
+  {
+   "name": "Biology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/BIOLMIN/"
+  },
+  {
+   "name": "Biotechnology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/BIOTECMIN/"
+  },
+  {
+   "name": "Black Cinema and Media Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/BLKCNMDMIN/"
+  },
+  {
+   "name": "Bosnian, Croatian, Serbian",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/BCSMIN/"
+  },
+  {
+   "name": "Business",
+   "school": "Kelley School of Business",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Central Eurasian Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CEUSMIN/"
+  },
+  {
+   "name": "Central Eurasian Studies with Language Certification",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CEUSLNGMIN/"
+  },
+  {
+   "name": "Chemistry",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CHEMMIN/"
+  },
+  {
+   "name": "Child & Adolescent Mental Health",
+   "school": "School of Education",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Cinema and Media Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CNMDASTMIN/"
+  },
+  {
+   "name": "Classical Civilization",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CLCVMIN/"
+  },
+  {
+   "name": "Climate Change Science",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CLCHSCIMIN/"
+  },
+  {
+   "name": "Coaching",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Cognitive Science",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/COGSMIN/"
+  },
+  {
+   "name": "Communication and Public Advocacy",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/COPUADVMIN/"
+  },
+  {
+   "name": "Community Visual Arts Education",
+   "school": "School of Education",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Comparative Arts",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CMPARTMIN/"
+  },
+  {
+   "name": "Comparative Literature",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CMLTMIN/"
+  },
+  {
+   "name": "Computational Linguistics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CMPLNGMIN/"
+  },
+  {
+   "name": "Computer Science",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Counseling",
+   "school": "School of Education",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Creative Technologies in Art + Design",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CTADSGNMIN/"
+  },
+  {
+   "name": "Creative Writing",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CRWRTMIN/"
+  },
+  {
+   "name": "Criminology and Criminal Justice",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CRIMCJUMIN/"
+  },
+  {
+   "name": "Czech",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/CZECHMIN/"
+  },
+  {
+   "name": "Data and Network Analytics",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Data Science",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Design Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/DSGNSTMIN/"
+  },
+  {
+   "name": "Dutch Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/DUTCHMIN/"
+  },
+  {
+   "name": "Early Childhood Education",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Earth and Atmospheric Sciences",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/EASMIN/"
+  },
+  {
+   "name": "East Asian Languages and Cultures",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/EALANMIN/"
+  },
+  {
+   "name": "East Asian Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/EASTMIN/"
+  },
+  {
+   "name": "Economics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ECONMIN/"
+  },
+  {
+   "name": "Economics and Political Science",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ECONPOLMIN/"
+  },
+  {
+   "name": "Education Policy",
+   "school": "School of Education",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Educational Studies",
+   "school": "School of Education",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "English",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ENGMIN/"
+  },
+  {
+   "name": "Entrepreneurship and Small Business Management",
+   "school": "Kelley School of Business",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Environmental and Sustainability Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ENSUSTMIN/"
+  },
+  {
+   "name": "Environmental Health",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Environmental Management",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Environmental Science",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ENVSCIMIN/"
+  },
+  {
+   "name": "Environmental Science and Health",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Epidemiology",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Ethics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ETHICSMIN/"
+  },
+  {
+   "name": "Ethnography of Communication",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ETHCOMMMIN/"
+  },
+  {
+   "name": "European Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/EUROMIN/"
+  },
+  {
+   "name": "Event Planning",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Exercise Science",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Fashion Media",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/FAMEDIAMIN/"
+  },
+  {
+   "name": "Fashion Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/FSSTMIN/"
+  },
+  {
+   "name": "Film Production",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/FILMPRDMIN/"
+  },
+  {
+   "name": "Financial Literacy",
+   "school": "Kelley School of Business",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Fitness Instruction",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Folklore and Ethnomusicology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/FOLKMIN/"
+  },
+  {
+   "name": "French",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/FRENMIN/"
+  },
+  {
+   "name": "Game Design",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GAMEDSNMIN/"
+  },
+  {
+   "name": "Gender Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GNDRMIN/"
+  },
+  {
+   "name": "Geographic Information Systems and Remote Sensing",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GISRSMIN/"
+  },
+  {
+   "name": "Geography",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GEOGMIN/"
+  },
+  {
+   "name": "German",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GERMIN/"
+  },
+  {
+   "name": "Germanic Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GERSTMIN/"
+  },
+  {
+   "name": "Global Health Promotion",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Global Media",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GLVMDIAMIN/"
+  },
+  {
+   "name": "Greek",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/GREEKMIN/"
+  },
+  {
+   "name": "Health, Identity, and Social Justice",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Healthcare Management and Policy",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Healthy Aging",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Hebrew",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/HEBREWMIN/"
+  },
+  {
+   "name": "Higher Education and Student Affairs",
+   "school": "School of Education",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Hindi",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/HINDIMIN/"
+  },
+  {
+   "name": "History",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/HISTMIN/"
+  },
+  {
+   "name": "Homeland Security Studies",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Hospitality Services",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Human Biology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/HUBIMIN/"
+  },
+  {
+   "name": "Human Development and Family Studies",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Human Resource Management",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Human Sexuality",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Human-Centered Computing",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Human-Computer Interaction/Design",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Illustration",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ILLUSTRMIN/"
+  },
+  {
+   "name": "India Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/INSTMIN/"
+  },
+  {
+   "name": "Individualized Minor",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/INDVMIN/"
+  },
+  {
+   "name": "Informatics",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Information Systems",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Information Technology",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Intelligence Studies",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Intelligent Systems Engineering",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Interior Design Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/INDSNSTMIN/"
+  },
+  {
+   "name": "International and Comparative Education",
+   "school": "School of Education",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "International Relations",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/INTLRELMIN/"
+  },
+  {
+   "name": "International Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/INTLMIN/"
+  },
+  {
+   "name": "Irish Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/IRISHSTMIN/"
+  },
+  {
+   "name": "Italian",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/ITALMIN/"
+  },
+  {
+   "name": "Jewish Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/JSTUMIN/"
+  },
+  {
+   "name": "Kinesiology",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Labor Studies",
+   "school": "School of Social Work",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Latin",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/LATINMIN/"
+  },
+  {
+   "name": "Latin American and Caribbean Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/LTAMMIN/"
+  },
+  {
+   "name": "Latino Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/LATSMIN/"
+  },
+  {
+   "name": "Law and Public Policy",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Leaders and Leadership",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/LEADLDRMIN/"
+  },
+  {
+   "name": "Leadership, Advocacy, and Public Service",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Linguistics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/LINGMIN/"
+  },
+  {
+   "name": "Marketing",
+   "school": "Kelley School of Business",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Maternal and Child Health",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Mathematics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MATHMIN/"
+  },
+  {
+   "name": "Media Advertising",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MDAADVMIN/"
+  },
+  {
+   "name": "Media and Diversity",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MDIADIVMIN/"
+  },
+  {
+   "name": "Media Management",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MDAMGMTMIN/"
+  },
+  {
+   "name": "Media Persuasion",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MDIAPRSMIN/"
+  },
+  {
+   "name": "Media, Sex and Gender",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MDGNDRMIN/"
+  },
+  {
+   "name": "Medical Anthropology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MEDANTHMIN/"
+  },
+  {
+   "name": "Medical Humanities",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MEDHUMMIN/"
+  },
+  {
+   "name": "Medical Sciences",
+   "school": "School of Medicine",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Medieval Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MESTMIN/"
+  },
+  {
+   "name": "Merchandising",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MERCHMIN/"
+  },
+  {
+   "name": "Microbiology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MICRMIN/"
+  },
+  {
+   "name": "Middle Eastern Languages and Cultures",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MELCMIN/"
+  },
+  {
+   "name": "Modern Greek",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MDRNGRKMIN/"
+  },
+  {
+   "name": "Molecular Life Sciences",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/MLSMIN/"
+  },
+  {
+   "name": "Music Scoring for Visual Media",
+   "school": "Jacobs School of Music",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Music Songwriting and Production",
+   "school": "Jacobs School of Music",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Music Studies",
+   "school": "Jacobs School of Music",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Native American and Indigenous Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/NAISMIN/"
+  },
+  {
+   "name": "Nonprofit Management",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Nordic Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/NORDSTMIN/"
+  },
+  {
+   "name": "Norwegian",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/NORWMIN/"
+  },
+  {
+   "name": "Nutrition",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Obesity and Health",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Outdoor Recreation, Parks, and Human Ecology",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Personal Well-Being",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Philosophy",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PHILMIN/"
+  },
+  {
+   "name": "Philosophy of Mind and Cognition",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PHILMCMIN/"
+  },
+  {
+   "name": "Philosophy of the Arts",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PHILARMIN/"
+  },
+  {
+   "name": "Philosophy, Political Science, and Economics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PHPSECMIN/"
+  },
+  {
+   "name": "Physics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PHYSMIN/"
+  },
+  {
+   "name": "Policy Studies",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Polish",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/POLISHMIN/"
+  },
+  {
+   "name": "Polish Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/POLISTMIN/"
+  },
+  {
+   "name": "Political Science",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/POLSMIN/"
+  },
+  {
+   "name": "Political Science and Economics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/POLSECNMIN/"
+  },
+  {
+   "name": "Portuguese",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PORTMIN/"
+  },
+  {
+   "name": "Pre-Professional Clinical Health",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PPCLHTHMIN/"
+  },
+  {
+   "name": "Psychology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PSYMIN/"
+  },
+  {
+   "name": "Public and Environmental Affairs",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Public Finance",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Public Health",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Public Management",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Public Relations",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/PBLCRELMIN/"
+  },
+  {
+   "name": "Recreational Sport Management",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Religious Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/RELMIN/"
+  },
+  {
+   "name": "Russian",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/RUSSIANMIN/"
+  },
+  {
+   "name": "Russian and East European Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/REESTMIN/"
+  },
+  {
+   "name": "Russian and East European Studies with Language Certification",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/REELNGMIN/"
+  },
+  {
+   "name": "Safety",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Science, Technology, and Medicine in Society",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SSRIMIN/"
+  },
+  {
+   "name": "Second Language Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SLSTMIN/"
+  },
+  {
+   "name": "Security Informatics",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Slavic and East European Languages and Cultures",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SLAVEAEMIN/"
+  },
+  {
+   "name": "Slavic Cinema",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SLAVCINMIN/"
+  },
+  {
+   "name": "Social Science and Medicine",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SSMEDMIN/"
+  },
+  {
+   "name": "Social Welfare Advocacy",
+   "school": "School of Social Work",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Sociology",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SOCMIN/"
+  },
+  {
+   "name": "Sociology of Work and Business",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SOCWKBSMIN/"
+  },
+  {
+   "name": "Southeast Asian and ASEAN Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SEASMIN/"
+  },
+  {
+   "name": "Spanish",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SPANMIN/"
+  },
+  {
+   "name": "Speech, Language and Hearing Sciences",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SLHSMIN/"
+  },
+  {
+   "name": "Sport Marketing and Management",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Sports Media",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/SPORTMDMIN/"
+  },
+  {
+   "name": "Statistics",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/STATMIN/"
+  },
+  {
+   "name": "Studio Art",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/FINASMIN/"
+  },
+  {
+   "name": "Theatre and Drama",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/THTRMIN/"
+  },
+  {
+   "name": "Tourism, Hospitality, and Event Management",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Ukrainian",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/UKRAINMIN/"
+  },
+  {
+   "name": "Urban Planning and Community Development",
+   "school": "O'Neill School of Public and Environmental Affairs",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Virtual Reality",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "Water Resources Science, Policy, and Management",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/WRPMGTMIN/"
+  },
+  {
+   "name": "Web Design and Development",
+   "school": "Luddy School of Informatics, Computing, and Engineering",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  },
+  {
+   "name": "World Political Systems",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/WRPOLSYMIN/"
+  },
+  {
+   "name": "Yiddish Studies",
+   "school": "College of Arts and Sciences",
+   "url": "https://bulletin.college.indiana.edu/programs/4268/YIDDSHMIN/"
+  },
+  {
+   "name": "Youth Development",
+   "school": "School of Public Health",
+   "url": "https://bulletin.college.indiana.edu/programs/outside-minors.html"
+  }
+ ]
+}

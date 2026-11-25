@@ -7,6 +7,6 @@ export default defineConfig({
   root: "web",
   envDir: "..",
   plugins: [react()],
-  server: { proxy: { "/api": `http://localhost:${apiPort}` } },
+  server: { proxy: { "/api/": `http://localhost:${apiPort}` } },
   test: { root: ".", environment: "node", include: ["{web,server,shared}/**/*.test.{ts,tsx}"] },
 });

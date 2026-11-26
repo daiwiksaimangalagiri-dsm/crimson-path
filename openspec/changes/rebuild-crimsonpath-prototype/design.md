@@ -32,7 +32,7 @@ Node 24 runs `.ts` files directly (type stripping), so the server needs no Expre
 Routes:
 - `GET /api/sources`: counts for courses and each opportunity file
 - `POST /api/roadmap`: body `{mode, text, profile}`, returns a checked plan
-- `POST /api/chat`: body `{message, profile, context, plan, history}`, returns `{reply, plan | null}`
+- `POST /api/chat`: body `{message, profile, mode, text, detected, plan, history}`, returns `{reply, plan | null}`
 
 Every body is parsed with a zod schema. A failed parse returns 400 with a code (`invalid_request`) and the field that failed. Bodies are limited to 64 KB, and notes or chat messages to 8,000 characters.
 
@@ -51,8 +51,14 @@ It runs on every roadmap and chat answer. Unit tests cover each rule in the spec
 ### Decision: Prompts keep the research app's rules, with real dates
 `buildPrompt`, `buildInterestPrompt` and `tweakPrompt` move to `server/prompts.ts`. "Today is November 17, 2026" becomes the real date, and term dates come from `shared/data/terms.json`: Spring 2027 classes begin Jan 11, 2027, spring break starts Mar 14, 2027, and any other term says "check One.IU". The stable parts (rules and output shape) go first, so prompt caching can reuse them.
 
+Added after the first draft:
+- A planning window: plan from the next term through the student's graduation term, and put classes in summer terms only if the student chose summer classes.
+- Credits and GenEd: keep each term within the preferred load using tool-reported credits, and when two classes fit the advice equally, prefer the one that also fills a GenEd area. `search_courses` takes an optional `gened` filter.
+
 ### Decision: Data files
-- `shared/data/courses.json`: copied from `.research/app/courses.json` without changes.
+- `shared/data/courses.json`: same row shape as the research file. `scripts/collect/courses.ts` keeps all 3,407 original rows, adds the 3,194 Bloomington undergraduate (UGRD, under 500) courses from IU's course API that the paste lacked, fills credits from the API, and puts official GenEd areas (from the 2026–27 GenEd approved-course search) first in the attributes column. Result: 6,601 courses, all with credits, 956 with GenEd areas. This adds courses with honors variants, so a bare "INFO 101" now returns candidates instead of one match.
+- `shared/data/programs.json`: from `scripts/collect/programs.ts`. Contains 225 bachelor's majors (IU degree API, Bloomington; Jacobs instrument variants collapsed to one major) and 198 minors (the College bulletin's minors, plus minors from other schools open to College students), each with its school and source URL.
+- `shared/data/terms.json`: known term dates, edited by hand from the Registrar's calendar.
 - `shared/data/clubs.json`, `events.json`, `internships.json`: arrays of `{name, description, url, source, collectedAt, ...type fields}`. They are produced by scripts in `scripts/collect/` and committed. A loader skips entries with no `url` and reports how many it skipped.
 - Clubs: beINvolved's public organization search (the endpoint is confirmed during the data task).
 - Events: events.iu.edu public listings or feed, upcoming only.
@@ -85,8 +91,10 @@ Desktop (≥960px)                         Phone (<640px)
                                           └───────────────────┘
 ```
   The path runs left to right on desktop and top to bottom on phones. Each semester is a node, and the line between nodes thickens with that term's credit load against the student's target. A counselor's pick is a solid crimson stop, and a suggestion is an outlined blue stop. That replaces the research app's colored side bars and legend tags.
-- **Quiz**: one question per screen, big tap targets, Enter to continue, a thin crimson progress line. No cards inside cards.
-- **Motion**: one moment only. When a roadmap arrives, the path draws from the first node to the last (400ms; none under `prefers-reduced-motion`). Opening a class expands in place.
+- **Welcome**: one large headline, three numbered steps (a real sequence) and a Start button, with a crimson rule down the left that echoes the path. Returning students skip it.
+- **Quiz**: one question per screen, big tap targets, Enter to continue, a thin crimson progress line. On wide screens, a list of all 12 questions sits beside the current one, showing each answer, and answered questions can be revisited. Long option lists get small icons. Major and minor use searchable pickers, and majors are filtered by the chosen school. No cards inside cards.
+- **Roadmap additions**: a graduation bar (credits taken, then planned, out of 120, and the semesters left until the graduation term), a GenEd panel (one tile per area, solid when covered and dashed when not), GenEd tags on each class, and the semester credit line in crimson when it's over the student's load.
+- **Motion**: two small moments. When a roadmap arrives, the path draws from the first node to the last (400ms), and each new quiz question fades in (220ms). Neither runs under `prefers-reduced-motion`. Opening a class expands in place.
 - **Copy**: the research app's copy stays where it's clear, with "→" removed from buttons and "·" removed from meta strings.
 - **Accessibility floor**: visible focus rings, ARIA tabs and listbox for autocomplete, 44px touch targets, checked at 200% text size.
 
@@ -94,7 +102,7 @@ Desktop (≥960px)                         Phone (<640px)
 `.claude/agents/lead.md` (model opus), started with `claude --agent lead`. It reads `tasks.md`, hands each task to a subagent (sonnet for routine edits and tests, haiku for lookups), reviews the result against the spec, runs the checks, ticks the task, commits, and pushes `main` at the end of each task group. Then it reports status, risks and the next decision to the managing lead. Why the main session: Claude Code subagents can't start subagents, so a lead that delegates has to be the main thread.
 
 ### Decision: Checks
-`npm run check` runs `tsc --noEmit` (strict, `noUncheckedIndexedAccess`) and `vitest run`. `npm run e2e` runs Playwright against the dev servers with the Claude call stubbed at the server boundary, plus one opt-in live run (`E2E_LIVE=1`) that makes a real API call. Lint and format tools are left out until the team asks for them.
+`npm run check` runs `tsc --noEmit` (strict, `noUncheckedIndexedAccess`) and `vitest run`. `npm run e2e` runs one Playwright flow in Google Chrome with the API stubbed at the browser's network layer, and saves screenshots at 375px and 1280px, light and dark. The real Claude call is checked once by hand (task 3.2), not in e2e. Lint and format tools are left out until the team asks for them.
 
 ## Risks / Trade-offs
 
@@ -104,6 +112,9 @@ Desktop (≥960px)                         Phone (<640px)
 - [Public repo] → `.env`, `.research/` and raw Handshake exports are gitignored. A check fails if `.env` is ever tracked.
 - [Opportunity data goes stale] → every entry has `collectedAt`, and the sources panel shows the oldest date.
 - [Topic courses share codes] → checks match code plus title (decision above).
+- [GenEd list is campus-wide] → schools add their own requirements on top; the GenEd panel tells students to confirm with their advisor.
+- [IU's degree API files some schools' majors under the College] → Media School, Hamilton Lugar and Eskenazi majors appear under College of Arts and Sciences; "Not sure yet" shows every major.
+- [Collected data drifts] → each collector fails loudly when counts drop below a floor, and every file records when it was collected.
 
 ### Decision: No live search count while building
 The research app showed "Searching the Classes file (N)…" as each tool call ran. Showing that here would need streaming from server to browser, so the prototype shows a fixed status line instead. Add it back with server-sent events if builds feel slow in testing.

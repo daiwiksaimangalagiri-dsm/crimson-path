@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Collects who the student is (year, major, interests, goals, load, learning style, comfort with math and coding, outside commitments) and which classes they have already taken, so every roadmap is tailored to them.
+Collects who the student is (year, IU school, major and minor, expected graduation, interests, goals, load, summer plans, learning style, comfort with math and coding, outside commitments) and which classes they have already taken, so every roadmap is tailored to them.
 
 ## ADDED Requirements
 

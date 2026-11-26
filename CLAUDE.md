@@ -186,3 +186,4 @@ Keep this file under 500 lines. When a section grows too big, move it to a neste
 - Push to `main` after every milestone (a finished task group with checks passing). The repo owner is `daiwiksaimangalagiri-dsm`, so run `gh auth switch -u daiwiksaimangalagiri-dsm` before pushing and switch back after.
 - The repo is public. Never commit `.env`, `.research/` or raw Handshake exports.
 - This is a prototype. Keep the scope small: one test file per module, no extra polish, no features beyond the spec.
+- When the lead asks for a change, update the active OpenSpec change (proposal, design, specs, tasks) in the same commit as the code, so the spec always matches what's built.

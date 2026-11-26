@@ -13,9 +13,9 @@ The system SHALL load the IU Bloomington undergraduate course list (levels 100â€
 - **WHEN** the roadmap screen opens
 - **THEN** it lists each data source with its count, or "not loaded" for any opportunity file that is missing
 
-#### Scenario: Catalog fails to load
-- **WHEN** the course list can't be loaded
-- **THEN** the system shows "The course list didn't load. Refresh the page to try again." and disables roadmap building
+#### Scenario: Catalog shown as a source
+- **WHEN** the roadmap screen opens
+- **THEN** the sources panel shows the catalog's course count and that it includes credits and GenEd areas
 
 ### Requirement: Courses carry their GenEd areas
 Each course SHALL list the IU Bloomington GenEd areas it is approved for (A&H, S&H, N&M, World Cultures, World Languages, English Composition, Mathematical Modeling), from IU's approved GenEd list, and the AI's course search SHALL be able to filter by area.
